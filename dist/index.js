@@ -1,5 +1,9 @@
 import { emitFile } from "@typespec/compiler";
 import { collectServices, extractFields, scalarName, isArrayType, isRecordType, arrayElementType, recordElementType, toSnakeCase, dottedPathToSnakeCase, checkAndReportReservedKeywords, } from "@specodec/typespec-emitter-core";
+let _tmpCounter = 0;
+function nextTmp() {
+    return `$_tmp${_tmpCounter++}`;
+}
 function fieldPhp(name) {
     return toSnakeCase(name); // safeFieldName("php", ...) when emitter-core supports it
 }
@@ -121,22 +125,6 @@ function readExpr(type, optional) {
         return "$r->read_float64()";
     if (n === "bytes")
         return "$r->read_bytes()";
-    if (isArrayType(type)) {
-        const elem = arrayElementType(type);
-        const readE = readExpr(elem);
-        const expr = `(function($r) { $arr = []; $r->begin_array(); while ($r->has_next_element()) { $arr[] = ${readE}; } $r->end_array(); return $arr; })($r)`;
-        if (optional)
-            return `$r->is_null() ? $r->read_null() : ${expr}`;
-        return expr;
-    }
-    if (isRecordType(type)) {
-        const elem = recordElementType(type);
-        const readE = readExpr(elem);
-        const expr = `(function($r) { $map = []; $r->begin_object(); while ($r->has_next_field()) { $key = $r->read_field_name(); $map[$key] = ${readE}; } $r->end_object(); return $map; })($r)`;
-        if (optional)
-            return `$r->is_null() ? $r->read_null() : ${expr}`;
-        return expr;
-    }
     if (type.kind === "Enum")
         return "$r->read_string()";
     if (type.kind === "Model" && type.name) {
@@ -152,6 +140,33 @@ function readExpr(type, optional) {
         return `decode_${sn}($r)`;
     }
     return "$r->read_string()";
+}
+function generateFieldRead(L, f, varName, indent) {
+    const tmp = nextTmp();
+    if (f.optional) {
+        L.push(`${indent}if ($r->is_null()) { $r->read_null(); ${varName} = null; continue; }`);
+    }
+    if (isArrayType(f.type)) {
+        const elem = arrayElementType(f.type);
+        L.push(`${indent}${tmp} = [];`);
+        L.push(`${indent}$r->begin_array();`);
+        L.push(`${indent}while ($r->has_next_element()) {`);
+        L.push(`${indent}    ${tmp}[] = ${readExpr(elem)};`);
+        L.push(`${indent}}`);
+        L.push(`${indent}$r->end_array();`);
+        L.push(`${indent}${varName} = ${tmp};`);
+    }
+    else if (isRecordType(f.type)) {
+        const elem = recordElementType(f.type);
+        L.push(`${indent}${tmp} = [];`);
+        L.push(`${indent}$r->begin_object();`);
+        L.push(`${indent}while ($r->has_next_field()) {`);
+        L.push(`${indent}    $k = $r->read_field_name();`);
+        L.push(`${indent}    ${tmp}[$k] = ${readExpr(elem)};`);
+        L.push(`${indent}}`);
+        L.push(`${indent}$r->end_object();`);
+        L.push(`${indent}${varName} = ${tmp};`);
+    }
 }
 function emitModelFunctions(m, L) {
     if (!m.name)
@@ -197,7 +212,15 @@ function emitModelFunctions(m, L) {
     L.push(`        $key = $r->read_field_name();`);
     for (const f of fields) {
         const fPhp = fieldPhp(f.name);
-        L.push(`        if ($key === "${f.name}") { $obj->${fPhp} = ${readExpr(f.type, f.optional)}; continue; }`);
+        if (isArrayType(f.type) || isRecordType(f.type)) {
+            L.push(`        if ($key === "${f.name}") {`);
+            generateFieldRead(L, f, `$obj->${fPhp}`, "            ");
+            L.push(`            continue;`);
+            L.push(`        }`);
+        }
+        else {
+            L.push(`        if ($key === "${f.name}") { $obj->${fPhp} = ${readExpr(f.type, f.optional)}; continue; }`);
+        }
     }
     L.push(`        $r->skip();`);
     L.push(`    }`);
