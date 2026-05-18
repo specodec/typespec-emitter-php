@@ -24,7 +24,7 @@ export type EmitterOptions = BaseEmitterOptions;
 
 let _tmpCounter = 0;
 function nextTmp(): string {
-  return `$_tmp${_tmpCounter++}`;
+  return `$_tmp`;
 }
 
 function fieldPhp(name: string): string {

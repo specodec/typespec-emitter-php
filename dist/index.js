@@ -2,7 +2,7 @@ import { emitFile } from "@typespec/compiler";
 import { collectServices, extractFields, scalarName, isArrayType, isRecordType, arrayElementType, recordElementType, toSnakeCase, dottedPathToSnakeCase, checkAndReportReservedKeywords, } from "@specodec/typespec-emitter-core";
 let _tmpCounter = 0;
 function nextTmp() {
-    return `$_tmp${_tmpCounter++}`;
+    return `$_tmp`;
 }
 function fieldPhp(name) {
     return toSnakeCase(name); // safeFieldName("php", ...) when emitter-core supports it
