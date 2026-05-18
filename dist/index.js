@@ -2,7 +2,7 @@ import { emitFile } from "@typespec/compiler";
 import { collectServices, extractFields, scalarName, isArrayType, isRecordType, arrayElementType, recordElementType, toSnakeCase, dottedPathToSnakeCase, checkAndReportReservedKeywords, } from "@specodec/typespec-emitter-core";
 let _tmpCounter = 0;
 function nextTmp() {
-    return `$_tmp`;
+    return `$tmp`;
 }
 function fieldPhp(name) {
     return toSnakeCase(name); // safeFieldName("php", ...) when emitter-core supports it
@@ -105,7 +105,7 @@ function writeLines(type, varExpr, indent) {
         return [`${indent}write_${toSnakeCase(type.name)}($w, ${varExpr});`];
     return [`${indent}$w->write_string((string)${varExpr});`];
 }
-function readExpr(type, optional) {
+function readExpr(type) {
     const n = scalarName(type);
     if (n === "string")
         return "$r->read_string()";
@@ -129,44 +129,85 @@ function readExpr(type, optional) {
         return "$r->read_string()";
     if (type.kind === "Model" && type.name) {
         const sn = toSnakeCase(type.name);
-        if (optional)
-            return `$r->is_null() ? $r->read_null() : decode_${sn}($r)`;
         return `decode_${sn}($r)`;
     }
     if (type.kind === "Union") {
         const sn = toSnakeCase(type.name);
-        if (optional)
-            return `$r->is_null() ? $r->read_null() : decode_${sn}($r)`;
         return `decode_${sn}($r)`;
     }
     return "$r->read_string()";
 }
-function generateFieldRead(L, f, varName, indent) {
-    const tmp = nextTmp();
-    if (f.optional) {
-        L.push(`${indent}if ($r->is_null()) { $r->read_null(); ${varName} = null; continue; }`);
-    }
+function generateFieldRead(f) {
     if (isArrayType(f.type)) {
         const elem = arrayElementType(f.type);
-        L.push(`${indent}${tmp} = [];`);
-        L.push(`${indent}$r->begin_array();`);
-        L.push(`${indent}while ($r->has_next_element()) {`);
-        L.push(`${indent}    ${tmp}[] = ${readExpr(elem)};`);
-        L.push(`${indent}}`);
-        L.push(`${indent}$r->end_array();`);
-        L.push(`${indent}${varName} = ${tmp};`);
+        const tmp = nextTmp();
+        const stmts = [];
+        if (f.optional) {
+            stmts.push(`${tmp} = null;`);
+            stmts.push(`if ($r->is_null()) {`);
+            stmts.push(`    $r->read_null();`);
+            stmts.push(`} else {`);
+            stmts.push(`    ${tmp} = [];`);
+            stmts.push(`    $r->begin_array();`);
+            stmts.push(`    while ($r->has_next_element()) {`);
+            stmts.push(`        ${tmp}[] = ${readExpr(elem)};`);
+            stmts.push(`    }`);
+            stmts.push(`    $r->end_array();`);
+            stmts.push(`}`);
+            return { stmts, value: tmp };
+        }
+        else {
+            stmts.push(`${tmp} = [];`);
+            stmts.push(`$r->begin_array();`);
+            stmts.push(`while ($r->has_next_element()) {`);
+            stmts.push(`    ${tmp}[] = ${readExpr(elem)};`);
+            stmts.push(`}`);
+            stmts.push(`$r->end_array();`);
+            return { stmts, value: tmp };
+        }
     }
-    else if (isRecordType(f.type)) {
+    if (isRecordType(f.type)) {
         const elem = recordElementType(f.type);
-        L.push(`${indent}${tmp} = [];`);
-        L.push(`${indent}$r->begin_object();`);
-        L.push(`${indent}while ($r->has_next_field()) {`);
-        L.push(`${indent}    $k = $r->read_field_name();`);
-        L.push(`${indent}    ${tmp}[$k] = ${readExpr(elem)};`);
-        L.push(`${indent}}`);
-        L.push(`${indent}$r->end_object();`);
-        L.push(`${indent}${varName} = ${tmp};`);
+        const tmp = nextTmp();
+        const stmts = [];
+        if (f.optional) {
+            stmts.push(`${tmp} = null;`);
+            stmts.push(`if ($r->is_null()) {`);
+            stmts.push(`    $r->read_null();`);
+            stmts.push(`} else {`);
+            stmts.push(`    ${tmp} = [];`);
+            stmts.push(`    $r->begin_object();`);
+            stmts.push(`    while ($r->has_next_field()) {`);
+            stmts.push(`        $k = $r->read_field_name();`);
+            stmts.push(`        ${tmp}[$k] = ${readExpr(elem)};`);
+            stmts.push(`    }`);
+            stmts.push(`    $r->end_object();`);
+            stmts.push(`}`);
+            return { stmts, value: tmp };
+        }
+        else {
+            stmts.push(`${tmp} = [];`);
+            stmts.push(`$r->begin_object();`);
+            stmts.push(`while ($r->has_next_field()) {`);
+            stmts.push(`    $k = $r->read_field_name();`);
+            stmts.push(`    ${tmp}[$k] = ${readExpr(elem)};`);
+            stmts.push(`}`);
+            stmts.push(`$r->end_object();`);
+            return { stmts, value: tmp };
+        }
     }
+    if (f.optional && ((f.type.kind === "Model" && f.type.name) || (f.type.kind === "Union" && f.type.name))) {
+        const tmp = nextTmp();
+        const stmts = [];
+        stmts.push(`${tmp} = null;`);
+        stmts.push(`if ($r->is_null()) {`);
+        stmts.push(`    $r->read_null();`);
+        stmts.push(`} else {`);
+        stmts.push(`    ${tmp} = ${readExpr(f.type)};`);
+        stmts.push(`}`);
+        return { stmts, value: tmp };
+    }
+    return { stmts: [], value: readExpr(f.type) };
 }
 function emitModelFunctions(m, L) {
     if (!m.name)
@@ -210,16 +251,22 @@ function emitModelFunctions(m, L) {
     L.push(`    $obj = new ${m.name}();`);
     L.push(`    while ($r->has_next_field()) {`);
     L.push(`        $key = $r->read_field_name();`);
+    const decodeResults = [];
     for (const f of fields) {
-        const fPhp = fieldPhp(f.name);
-        if (isArrayType(f.type) || isRecordType(f.type)) {
-            L.push(`        if ($key === "${f.name}") {`);
-            generateFieldRead(L, f, `$obj->${fPhp}`, "            ");
+        decodeResults.push({ name: f.name, fPhp: fieldPhp(f.name), result: generateFieldRead(f) });
+    }
+    for (const { name, fPhp, result } of decodeResults) {
+        if (result.stmts.length > 0) {
+            L.push(`        if ($key === "${name}") {`);
+            for (const stmt of result.stmts) {
+                L.push(`            ${stmt}`);
+            }
+            L.push(`            $obj->${fPhp} = ${result.value};`);
             L.push(`            continue;`);
             L.push(`        }`);
         }
         else {
-            L.push(`        if ($key === "${f.name}") { $obj->${fPhp} = ${readExpr(f.type, f.optional)}; continue; }`);
+            L.push(`        if ($key === "${name}") { $obj->${fPhp} = ${result.value}; continue; }`);
         }
     }
     L.push(`        $r->skip();`);
