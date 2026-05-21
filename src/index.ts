@@ -27,11 +27,11 @@ function nextTmp(): string {
   return `$tmp${_tmpCounter++}`;
 }
 
-function fieldPhp(name: string): string {
+export function fieldPhp(name: string): string {
   return safeFieldName("php", name);
 }
 
-function typeToPhp(type: Type, optional: boolean = false): string {
+export function typeToPhp(type: Type, optional: boolean = false): string {
   const n = scalarName(type);
   if (n === "string") return optional ? "?string" : "string";
   if (n === "boolean") return optional ? "?bool" : "bool";
@@ -52,7 +52,7 @@ function typeToPhp(type: Type, optional: boolean = false): string {
   return "mixed";
 }
 
-function phpDefault(type: Type): string {
+export function phpDefault(type: Type): string {
   const n = scalarName(type);
   if (n === "boolean") return "false";
   if (["int8", "int16", "int32", "uint8", "uint16", "uint32", "integer"].includes(n)) return "0";
@@ -66,7 +66,7 @@ function phpDefault(type: Type): string {
   return "null";
 }
 
-function writeLines(type: Type, varExpr: string, indent: string): string[] {
+export function writeLines(type: Type, varExpr: string, indent: string): string[] {
   const n = scalarName(type);
   if (n === "string") return [`${indent}$w->write_string(${varExpr});`];
   if (n === "boolean") return [`${indent}$w->write_bool(${varExpr});`];
@@ -108,7 +108,7 @@ function writeLines(type: Type, varExpr: string, indent: string): string[] {
   return [`${indent}$w->write_string((string)${varExpr});`];
 }
 
-function readExpr(type: Type): string {
+export function readExpr(type: Type): string {
   const n = scalarName(type);
   if (n === "string") return "$r->read_string()";
   if (n === "boolean") return "$r->read_bool()";
@@ -131,7 +131,7 @@ function readExpr(type: Type): string {
   return "$r->read_string()";
 }
 
-function generateFieldRead(f: { name: string; type: any; optional: boolean }): { stmts: string[]; value: string } {
+export function generateFieldRead(f: { name: string; type: any; optional: boolean }): { stmts: string[]; value: string } {
   if (isArrayType(f.type)) {
     const elem = arrayElementType(f.type)!;
     const tmp = nextTmp();
@@ -202,7 +202,7 @@ function generateFieldRead(f: { name: string; type: any; optional: boolean }): {
   return { stmts: [], value: readExpr(f.type) };
 }
 
-function generateModelCode(m: Model): string {
+export function generateModelCode(m: Model): string {
   if (!m.name) return;
   const lines: string[] = [];
   const fields = extractFields(m);
@@ -267,7 +267,7 @@ function generateModelCode(m: Model): string {
   return lines.join("\n");
 }
 
-function generateEnumCode(e: EnumInfo): string[] {
+export function generateEnumCode(e: EnumInfo): string[] {
   const lines: string[] = [];
   lines.push(`enum ${e.name}: int {`);
   for (const m of e.members) lines.push(`    case ${m.name} = ${m.value};`);
