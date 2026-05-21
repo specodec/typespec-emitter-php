@@ -28,7 +28,7 @@ function nextTmp(): string {
 }
 
 function fieldPhp(name: string): string {
-  return toSnakeCase(name); // safeFieldName("php", ...) when emitter-core supports it
+  return safeFieldName("php", name);
 }
 
 function typeToPhp(type: Type, optional: boolean = false): string {
@@ -38,7 +38,7 @@ function typeToPhp(type: Type, optional: boolean = false): string {
   if (["int8", "int16", "int32", "uint8", "uint16", "uint32", "integer"].includes(n))
     return optional ? "?int" : "int";
   if (["int64", "uint64"].includes(n))
-    return "?\\GMP"; // Always nullable since PHP can't use gmp_init() as const default
+    return optional ? "?string" : "string";
   if (["float32", "float64", "float", "decimal"].includes(n))
     return optional ? "?float" : "float";
   if (n === "bytes") return optional ? "?string" : "string"; // PHP strings are binary-safe
@@ -56,7 +56,7 @@ function phpDefault(type: Type): string {
   const n = scalarName(type);
   if (n === "boolean") return "false";
   if (["int8", "int16", "int32", "uint8", "uint16", "uint32", "integer"].includes(n)) return "0";
-  if (["int64", "uint64"].includes(n)) return "null";
+  if (["int64", "uint64"].includes(n)) return "'0'";
   if (["float32", "float64", "float", "decimal"].includes(n)) return "0.0";
   if (n === "string" || n === "bytes") return "''";
   if (type.kind === "Enum") return "''";
@@ -202,67 +202,69 @@ function generateFieldRead(f: { name: string; type: any; optional: boolean }): {
   return { stmts: [], value: readExpr(f.type) };
 }
 
-function emitModelFunctions(m: Model, L: string[]): void {
+function generateModelCode(m: Model): string {
   if (!m.name) return;
+  const lines: string[] = [];
   const fields = extractFields(m);
   const required = fields.filter((f) => !f.optional);
   const optional = fields.filter((f) => f.optional);
   const sn = toSnakeCase(m.name);
 
   // Encode
-  L.push(`function write_${sn}(SpecWriter $w, mixed $obj): void {`);
+  lines.push(`function write_${sn}(SpecWriter $w, mixed $obj): void {`);
   if (optional.length === 0) {
-    L.push(`    $w->begin_object(${fields.length});`);
+    lines.push(`    $w->begin_object(${fields.length});`);
   } else {
-    L.push(`    $count = ${required.length};`);
-    for (const f of optional) L.push(`    if ($obj->${fieldPhp(f.name)} !== null) $count++;`);
-    L.push(`    $w->begin_object($count);`);
+    lines.push(`    $count = ${required.length};`);
+    for (const f of optional) lines.push(`    if ($obj->${fieldPhp(f.name)} !== null) $count++;`);
+    lines.push(`    $w->begin_object($count);`);
   }
   for (const f of fields) {
     const fPhp = fieldPhp(f.name);
     if (f.optional) {
-      L.push(`    if ($obj->${fPhp} !== null) {`);
-      L.push(`        $w->write_field("${f.name}");`);
-      for (const line of writeLines(f.type, `$obj->${fPhp}`, "        ")) L.push(line);
-      L.push(`    }`);
+      lines.push(`    if ($obj->${fPhp} !== null) {`);
+      lines.push(`        $w->write_field("${f.name}");`);
+      for (const line of writeLines(f.type, `$obj->${fPhp}`, "        ")) lines.push(line);
+      lines.push(`    }`);
     } else {
-      L.push(`    $w->write_field("${f.name}");`);
-      for (const line of writeLines(f.type, `$obj->${fPhp}`, "    ")) L.push(line);
+      lines.push(`    $w->write_field("${f.name}");`);
+      for (const line of writeLines(f.type, `$obj->${fPhp}`, "    ")) lines.push(line);
     }
   }
-  L.push(`    $w->end_object();`);
-  L.push(`}`);
-  L.push("");
+  lines.push(`    $w->end_object();`);
+  lines.push(`}`);
+  lines.push("");
 
   // Decode
-  L.push(`function decode_${sn}(SpecReader $r): mixed {`);
-  L.push(`    $r->begin_object();`);
-  L.push(`    $obj = new ${m.name}();`);
-  L.push(`    while ($r->has_next_field()) {`);
-  L.push(`        $key = $r->read_field_name();`);
+  lines.push(`function decode_${sn}(SpecReader $r): mixed {`);
+  lines.push(`    $r->begin_object();`);
+  lines.push(`    $obj = new ${m.name}();`);
+  lines.push(`    while ($r->has_next_field()) {`);
+  lines.push(`        $key = $r->read_field_name();`);
   const decodeResults: { name: string; fPhp: string; result: { stmts: string[]; value: string } }[] = [];
   for (const f of fields) {
     decodeResults.push({ name: f.name, fPhp: fieldPhp(f.name), result: generateFieldRead(f) });
   }
   for (const { name, fPhp, result } of decodeResults) {
     if (result.stmts.length > 0) {
-      L.push(`        if ($key === "${name}") {`);
+      lines.push(`        if ($key === "${name}") {`);
       for (const stmt of result.stmts) {
-        L.push(`            ${stmt}`);
+        lines.push(`            ${stmt}`);
       }
-      L.push(`            $obj->${fPhp} = ${result.value};`);
-      L.push(`            continue;`);
-      L.push(`        }`);
+      lines.push(`            $obj->${fPhp} = ${result.value};`);
+      lines.push(`            continue;`);
+      lines.push(`        }`);
     } else {
-      L.push(`        if ($key === "${name}") { $obj->${fPhp} = ${result.value}; continue; }`);
+      lines.push(`        if ($key === "${name}") { $obj->${fPhp} = ${result.value}; continue; }`);
     }
   }
-  L.push(`        $r->skip();`);
-  L.push(`    }`);
-  L.push(`    $r->end_object();`);
-  L.push(`    return $obj;`);
-  L.push(`}`);
-  L.push("");
+  lines.push(`        $r->skip();`);
+  lines.push(`    }`);
+  lines.push(`    $r->end_object();`);
+  lines.push(`    return $obj;`);
+  lines.push(`}`);
+  lines.push("");
+  return lines.join("\n");
 }
 
 function generateEnumCode(e: EnumInfo): string[] {
@@ -411,7 +413,7 @@ export async function $onEmit(context: EmitContext<EmitterOptions>) {
 
     for (const e of svc.enums) { L.push(...generateEnumCode(e)); L.push(""); }
     for (const u of svc.unions) generateUnionCode(u, L);
-    for (const m of svc.models) emitModelFunctions(m, L);
+    for (const m of svc.models) L.push(generateModelCode(m));
 
     // Codecs
     for (const m of svc.models) {

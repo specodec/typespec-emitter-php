@@ -1,6 +1,6 @@
 {
   "name": "@specodec/typespec-emitter-php",
-  "version": "0.0.23",
+  "version": "1.0.0",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -35,7 +35,7 @@
     "@specodec/typespec-emitter-core": "^1.0.1"
   },
   "publishConfig": {
-    "registry": "http://10.199.64.20:3000/api/packages/specodec/npm/"
+    "registry": "http://10.199.64.20:30000/api/packages/specodec/npm/"
   },
   "peerDependencies": {
     "@typespec/compiler": "^1.12.0",
