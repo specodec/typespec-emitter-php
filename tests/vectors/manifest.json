@@ -1,0 +1,5486 @@
+{
+  "scalars": {
+    "int8_min": {
+      "type": "int32",
+      "value": -128,
+      "valueType": "number"
+    },
+    "int8_max": {
+      "type": "int32",
+      "value": 127,
+      "valueType": "number"
+    },
+    "int16_min": {
+      "type": "int32",
+      "value": -32768,
+      "valueType": "number"
+    },
+    "int16_max": {
+      "type": "int32",
+      "value": 32767,
+      "valueType": "number"
+    },
+    "int32_min": {
+      "type": "int32",
+      "value": -2147483648,
+      "valueType": "number"
+    },
+    "int32_max": {
+      "type": "int32",
+      "value": 2147483647,
+      "valueType": "number"
+    },
+    "int64_min": {
+      "type": "int64",
+      "value": "-9223372036854775808",
+      "valueType": "bigint"
+    },
+    "int64_max": {
+      "type": "int64",
+      "value": "9223372036854775807",
+      "valueType": "bigint"
+    },
+    "uint8_max": {
+      "type": "uint32",
+      "value": 255,
+      "valueType": "number"
+    },
+    "uint16_max": {
+      "type": "uint32",
+      "value": 65535,
+      "valueType": "number"
+    },
+    "uint32_max": {
+      "type": "uint32",
+      "value": 4294967295,
+      "valueType": "number"
+    },
+    "uint64_max": {
+      "type": "uint64",
+      "value": "18446744073709551615",
+      "valueType": "bigint"
+    },
+    "float32_1.5": {
+      "type": "float32",
+      "value": 1.5,
+      "valueType": "number"
+    },
+    "float32_neg_zero": {
+      "type": "float32",
+      "value": 0,
+      "valueType": "number"
+    },
+    "float32_inf": {
+      "type": "float32",
+      "value": "Infinity",
+      "valueType": "number"
+    },
+    "float32_neg_inf": {
+      "type": "float32",
+      "value": "-Infinity",
+      "valueType": "number"
+    },
+    "float32_nan": {
+      "type": "float32",
+      "value": "NaN",
+      "valueType": "number"
+    },
+    "float64_pi": {
+      "type": "float64",
+      "value": 3.14159265358979,
+      "valueType": "number"
+    },
+    "float64_neg_zero": {
+      "type": "float64",
+      "value": 0,
+      "valueType": "number"
+    },
+    "float64_inf": {
+      "type": "float64",
+      "value": "Infinity",
+      "valueType": "number"
+    },
+    "float64_neg_inf": {
+      "type": "float64",
+      "value": "-Infinity",
+      "valueType": "number"
+    },
+    "float64_nan": {
+      "type": "float64",
+      "value": "NaN",
+      "valueType": "number"
+    },
+    "str_empty": {
+      "type": "string",
+      "value": "",
+      "valueType": "string"
+    },
+    "str_ascii": {
+      "type": "string",
+      "value": "hello",
+      "valueType": "string"
+    },
+    "str_null_byte": {
+      "type": "string",
+      "value": "a\u0000b",
+      "valueType": "string"
+    },
+    "str_escape": {
+      "type": "string",
+      "value": "a\nb\tc\"d\\e",
+      "valueType": "string"
+    },
+    "str_unicode": {
+      "type": "string",
+      "value": "你好世界🌍",
+      "valueType": "string"
+    },
+    "str_31": {
+      "type": "string",
+      "value": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "valueType": "string"
+    },
+    "str_32": {
+      "type": "string",
+      "value": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "valueType": "string"
+    },
+    "str_255": {
+      "type": "string",
+      "value": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "valueType": "string"
+    },
+    "str_256": {
+      "type": "string",
+      "value": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "valueType": "string"
+    },
+    "bytes_empty": {
+      "type": "bytes",
+      "value": "",
+      "valueType": "bytes"
+    },
+    "bytes_small": {
+      "type": "bytes",
+      "value": "AAF//w==",
+      "valueType": "bytes"
+    },
+    "bytes_31": {
+      "type": "bytes",
+      "value": "QkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQg==",
+      "valueType": "bytes"
+    },
+    "bytes_32": {
+      "type": "bytes",
+      "value": "QkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkI=",
+      "valueType": "bytes"
+    },
+    "bytes_255": {
+      "type": "bytes",
+      "value": "QkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJC",
+      "valueType": "bytes"
+    },
+    "bytes_256": {
+      "type": "bytes",
+      "value": "QkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQg==",
+      "valueType": "bytes"
+    },
+    "bytes_zeros": {
+      "type": "bytes",
+      "value": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+      "valueType": "bytes"
+    },
+    "bytes_ff": {
+      "type": "bytes",
+      "value": "/////////////////////////////////////////////////////////////////////////////////////w==",
+      "valueType": "bytes"
+    },
+    "bool_true": {
+      "type": "bool",
+      "value": true,
+      "valueType": "boolean"
+    },
+    "bool_false": {
+      "type": "bool",
+      "value": false,
+      "valueType": "boolean"
+    }
+  },
+  "objects": {
+    "OptInner": {
+      "name": "world",
+      "score": 0,
+      "tag": "foo"
+    },
+    "SingleString": {
+      "v": "world"
+    },
+    "SingleBoolean": {
+      "v": false
+    },
+    "SingleInt8": {
+      "v": 0
+    },
+    "SingleInt16": {
+      "v": 0
+    },
+    "SingleInt32": {
+      "v": 0
+    },
+    "SingleInt64": {
+      "v": {
+        "__type": "bigint",
+        "__value": "0"
+      }
+    },
+    "SingleUint8": {
+      "v": 128
+    },
+    "SingleUint16": {
+      "v": 10000
+    },
+    "SingleUint32": {
+      "v": 1000000000
+    },
+    "SingleUint64": {
+      "v": {
+        "__type": "bigint",
+        "__value": "9000000000"
+      }
+    },
+    "SingleFloat32": {
+      "v": -1.5
+    },
+    "SingleFloat64": {
+      "v": -3.14159265358979
+    },
+    "SingleBytes": {
+      "v": {
+        "type": "Buffer",
+        "data": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    "OptSingleString": {},
+    "OptSingleBoolean": {},
+    "OptSingleInt8": {
+      "v": 0
+    },
+    "OptSingleInt16": {
+      "v": 0
+    },
+    "OptSingleInt32": {},
+    "OptSingleInt64": {
+      "v": {
+        "__type": "bigint",
+        "__value": "0"
+      }
+    },
+    "OptSingleUint8": {
+      "v": 128
+    },
+    "OptSingleUint16": {
+      "v": 10000
+    },
+    "OptSingleUint32": {
+      "v": 1000000000
+    },
+    "OptSingleUint64": {
+      "v": {
+        "__type": "bigint",
+        "__value": "9000000000"
+      }
+    },
+    "OptSingleFloat32": {
+      "v": -1.5
+    },
+    "OptSingleFloat64": {
+      "v": -3.14159265358979
+    },
+    "OptSingleBytes": {
+      "v": {
+        "type": "Buffer",
+        "data": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    "PairString": {
+      "a": "world",
+      "b": "test"
+    },
+    "PairBoolean": {
+      "a": false,
+      "b": true
+    },
+    "PairInt8": {
+      "a": 0,
+      "b": 127
+    },
+    "PairInt16": {
+      "a": 0,
+      "b": 32767
+    },
+    "PairInt32": {
+      "a": 0,
+      "b": 2147483647
+    },
+    "PairInt64": {
+      "a": {
+        "__type": "bigint",
+        "__value": "0"
+      },
+      "b": {
+        "__type": "bigint",
+        "__value": "9223372036854775807"
+      }
+    },
+    "PairUint8": {
+      "a": 128,
+      "b": 200
+    },
+    "PairUint16": {
+      "a": 10000,
+      "b": 50000
+    },
+    "PairUint32": {
+      "a": 1000000000,
+      "b": 3000000000
+    },
+    "PairUint64": {
+      "a": {
+        "__type": "bigint",
+        "__value": "9000000000"
+      },
+      "b": {
+        "__type": "bigint",
+        "__value": "16000000000000000000"
+      }
+    },
+    "PairFloat32": {
+      "a": -1.5,
+      "b": 0
+    },
+    "PairFloat64": {
+      "a": -3.14159265358979,
+      "b": 0
+    },
+    "PairBytes": {
+      "a": {
+        "type": "Buffer",
+        "data": [
+          0,
+          1,
+          2
+        ]
+      },
+      "b": {
+        "type": "Buffer",
+        "data": [
+          255
+        ]
+      }
+    },
+    "DualStringInt32": {
+      "a": "world",
+      "b": 2147483647
+    },
+    "DualStringBoolean": {
+      "a": "world",
+      "b": true
+    },
+    "DualStringFloat64": {
+      "a": "world",
+      "b": 0
+    },
+    "DualStringBytes": {
+      "a": "world",
+      "b": {
+        "type": "Buffer",
+        "data": [
+          255
+        ]
+      }
+    },
+    "DualInt32Boolean": {
+      "a": 0,
+      "b": true
+    },
+    "DualInt32Float64": {
+      "a": 0,
+      "b": 0
+    },
+    "DualInt32Int64": {
+      "a": 0,
+      "b": {
+        "__type": "bigint",
+        "__value": "9223372036854775807"
+      }
+    },
+    "DualInt32Uint32": {
+      "a": 0,
+      "b": 3000000000
+    },
+    "DualInt64Uint64": {
+      "a": {
+        "__type": "bigint",
+        "__value": "0"
+      },
+      "b": {
+        "__type": "bigint",
+        "__value": "16000000000000000000"
+      }
+    },
+    "DualFloat32Float64": {
+      "a": -1.5,
+      "b": 0
+    },
+    "DualFloat64Boolean": {
+      "a": -3.14159265358979,
+      "b": true
+    },
+    "DualFloat64Bytes": {
+      "a": -3.14159265358979,
+      "b": {
+        "type": "Buffer",
+        "data": [
+          255
+        ]
+      }
+    },
+    "DualUint32Uint64": {
+      "a": 1000000000,
+      "b": {
+        "__type": "bigint",
+        "__value": "16000000000000000000"
+      }
+    },
+    "DualBooleanBytes": {
+      "a": false,
+      "b": {
+        "type": "Buffer",
+        "data": [
+          255
+        ]
+      }
+    },
+    "DualInt8Uint8": {
+      "a": 0,
+      "b": 200
+    },
+    "DualInt16Uint16": {
+      "a": 0,
+      "b": 50000
+    },
+    "DualStringInt64": {
+      "a": "world",
+      "b": {
+        "__type": "bigint",
+        "__value": "9223372036854775807"
+      }
+    },
+    "DualStringUint64": {
+      "a": "world",
+      "b": {
+        "__type": "bigint",
+        "__value": "16000000000000000000"
+      }
+    },
+    "DualInt32Bytes": {
+      "a": 0,
+      "b": {
+        "type": "Buffer",
+        "data": [
+          255
+        ]
+      }
+    },
+    "DualFloat64Int32": {
+      "a": -3.14159265358979,
+      "b": 2147483647
+    },
+    "DualBooleanInt32": {
+      "a": false,
+      "b": 2147483647
+    },
+    "DualBytesInt64": {
+      "a": {
+        "type": "Buffer",
+        "data": [
+          0,
+          1,
+          2
+        ]
+      },
+      "b": {
+        "__type": "bigint",
+        "__value": "9223372036854775807"
+      }
+    },
+    "DualInt8Float32": {
+      "a": 0,
+      "b": 0
+    },
+    "DualUint8Int16": {
+      "a": 128,
+      "b": 32767
+    },
+    "DualInt64Float64": {
+      "a": {
+        "__type": "bigint",
+        "__value": "0"
+      },
+      "b": 0
+    },
+    "DualUint64String": {
+      "a": {
+        "__type": "bigint",
+        "__value": "9000000000"
+      },
+      "b": "test"
+    },
+    "Triple01": {
+      "a": "world",
+      "b": 2147483647,
+      "c": false
+    },
+    "Triple02": {
+      "a": -3.14159265358979,
+      "b": 0,
+      "c": 0
+    },
+    "Triple03": {
+      "a": 0,
+      "b": 2147483647,
+      "c": -2147483648
+    },
+    "Triple04": {
+      "a": "world",
+      "b": "test",
+      "c": -2147483648
+    },
+    "Triple05": {
+      "a": {
+        "__type": "bigint",
+        "__value": "0"
+      },
+      "b": "test",
+      "c": false
+    },
+    "Triple06": {
+      "a": 1000000000,
+      "b": {
+        "__type": "bigint",
+        "__value": "16000000000000000000"
+      },
+      "c": "foo"
+    },
+    "Triple07": {
+      "a": {
+        "type": "Buffer",
+        "data": [
+          0,
+          1,
+          2
+        ]
+      },
+      "b": "test",
+      "c": -2147483648
+    },
+    "Triple08": {
+      "a": -1.5,
+      "b": 2147483647,
+      "c": false
+    },
+    "Triple09": {
+      "a": "world",
+      "b": {
+        "__type": "bigint",
+        "__value": "9223372036854775807"
+      },
+      "c": 0
+    },
+    "Triple10": {
+      "a": false,
+      "b": true,
+      "c": false
+    },
+    "Triple11": {
+      "a": 0,
+      "b": 32767,
+      "c": -2147483648
+    },
+    "Triple12": {
+      "a": 128,
+      "b": 50000,
+      "c": 4294967295
+    },
+    "Triple13": {
+      "a": "world",
+      "b": {
+        "type": "Buffer",
+        "data": [
+          255
+        ]
+      },
+      "c": 0
+    },
+    "Triple14": {
+      "a": {
+        "__type": "bigint",
+        "__value": "0"
+      },
+      "b": {
+        "__type": "bigint",
+        "__value": "16000000000000000000"
+      },
+      "c": false
+    },
+    "Triple15": {
+      "a": -3.14159265358979,
+      "b": "test",
+      "c": {
+        "type": "Buffer",
+        "data": [
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66
+        ]
+      }
+    },
+    "Five01": {
+      "f1": "world",
+      "f2": 2147483647,
+      "f3": false,
+      "f4": 2.718281828,
+      "f5": {
+        "type": "Buffer",
+        "data": [
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255
+        ]
+      }
+    },
+    "Five02": {
+      "f1": 0,
+      "f2": 2147483647,
+      "f3": -2147483648,
+      "f4": -100000,
+      "f5": 0
+    },
+    "Five03": {
+      "f1": "world",
+      "f2": "test",
+      "f3": "foo",
+      "f4": "bar",
+      "f5": "a\nb"
+    },
+    "Five04": {
+      "f1": -3.14159265358979,
+      "f2": 2147483647,
+      "f3": "foo",
+      "f4": true,
+      "f5": {
+        "type": "Buffer",
+        "data": [
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255
+        ]
+      }
+    },
+    "Five05": {
+      "f1": {
+        "__type": "bigint",
+        "__value": "0"
+      },
+      "f2": {
+        "__type": "bigint",
+        "__value": "16000000000000000000"
+      },
+      "f3": "foo",
+      "f4": 3.14,
+      "f5": 0
+    },
+    "Five06": {
+      "f1": false,
+      "f2": "test",
+      "f3": -2147483648,
+      "f4": 2.718281828,
+      "f5": 1000000000
+    },
+    "Five07": {
+      "f1": {
+        "type": "Buffer",
+        "data": [
+          0,
+          1,
+          2
+        ]
+      },
+      "f2": {
+        "type": "Buffer",
+        "data": [
+          255
+        ]
+      },
+      "f3": "foo",
+      "f4": -100000,
+      "f5": -3.14159265358979
+    },
+    "Five08": {
+      "f1": 128,
+      "f2": 50000,
+      "f3": 4294967295,
+      "f4": -42,
+      "f5": 0
+    },
+    "Five09": {
+      "f1": -1.5,
+      "f2": 0,
+      "f3": -2147483648,
+      "f4": {
+        "__type": "bigint",
+        "__value": "-9000000000"
+      },
+      "f5": "a\nb"
+    },
+    "Five10": {
+      "f1": "world",
+      "f2": true,
+      "f3": {
+        "__type": "bigint",
+        "__value": "-9223372036854775808"
+      },
+      "f4": {
+        "__type": "bigint",
+        "__value": "0"
+      },
+      "f5": -3.14159265358979
+    },
+    "Ten01": {
+      "f1": "world",
+      "f2": true,
+      "f3": -128,
+      "f4": -1000,
+      "f5": 0,
+      "f6": {
+        "__type": "bigint",
+        "__value": "9223372036854775807"
+      },
+      "f7": 255,
+      "f8": 0,
+      "f9": 1000000000,
+      "f10": {
+        "__type": "bigint",
+        "__value": "16000000000000000000"
+      }
+    },
+    "Ten02": {
+      "f1": 0,
+      "f2": 2147483647,
+      "f3": {
+        "__type": "bigint",
+        "__value": "-9223372036854775808"
+      },
+      "f4": 0,
+      "f5": 10000,
+      "f6": 3000000000,
+      "f7": {
+        "__type": "bigint",
+        "__value": "18446744073709551615"
+      },
+      "f8": 3.14,
+      "f9": -3.14159265358979,
+      "f10": {
+        "type": "Buffer",
+        "data": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "Ten03": {
+      "f1": 128,
+      "f2": 50000,
+      "f3": 4294967295,
+      "f4": {
+        "__type": "bigint",
+        "__value": "0"
+      },
+      "f5": -1.5,
+      "f6": 0,
+      "f7": {
+        "type": "Buffer",
+        "data": [
+          0,
+          1,
+          2
+        ]
+      },
+      "f8": "a\u0000b",
+      "f9": false,
+      "f10": 127
+    },
+    "Ten04": {
+      "f1": {
+        "__type": "bigint",
+        "__value": "9000000000"
+      },
+      "f2": 0,
+      "f3": 0,
+      "f4": {
+        "type": "Buffer",
+        "data": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "f5": "a\nb",
+      "f6": true,
+      "f7": -128,
+      "f8": -1000,
+      "f9": 0,
+      "f10": {
+        "__type": "bigint",
+        "__value": "9223372036854775807"
+      }
+    },
+    "Ten05": {
+      "f1": {
+        "type": "Buffer",
+        "data": [
+          0,
+          1,
+          2
+        ]
+      },
+      "f2": "test",
+      "f3": false,
+      "f4": -42,
+      "f5": 0,
+      "f6": 2147483647,
+      "f7": {
+        "__type": "bigint",
+        "__value": "-9223372036854775808"
+      },
+      "f8": 0,
+      "f9": 10000,
+      "f10": 3000000000
+    },
+    "ArrString": {
+      "items": [
+        "world",
+        "test"
+      ]
+    },
+    "ArrInt32": {
+      "items": [
+        0,
+        2147483647
+      ]
+    },
+    "ArrBoolean": {
+      "items": [
+        false,
+        true
+      ]
+    },
+    "ArrFloat64": {
+      "items": [
+        -3.14159265358979,
+        0
+      ]
+    },
+    "ArrBytes": {
+      "items": [
+        {
+          "type": "Buffer",
+          "data": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "type": "Buffer",
+          "data": [
+            255
+          ]
+        }
+      ]
+    },
+    "ArrInt64": {
+      "items": [
+        {
+          "__type": "bigint",
+          "__value": "0"
+        },
+        {
+          "__type": "bigint",
+          "__value": "9223372036854775807"
+        }
+      ]
+    },
+    "ArrUint64": {
+      "items": [
+        {
+          "__type": "bigint",
+          "__value": "9000000000"
+        },
+        {
+          "__type": "bigint",
+          "__value": "16000000000000000000"
+        }
+      ]
+    },
+    "MultiArr1": {
+      "names": [
+        "world",
+        "test"
+      ],
+      "scores": [
+        2147483647,
+        -2147483648,
+        -100000
+      ]
+    },
+    "MultiArr2": {
+      "flags": [
+        false,
+        true
+      ],
+      "values": [
+        0,
+        0,
+        2.718281828
+      ],
+      "payload": [
+        {
+          "type": "Buffer",
+          "data": [
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66
+          ]
+        }
+      ]
+    },
+    "MultiArr3": {
+      "a": [
+        "world",
+        "test"
+      ],
+      "b": [
+        2147483647,
+        -2147483648,
+        -100000
+      ],
+      "c": [
+        0
+      ]
+    },
+    "MultiArr4": {
+      "ids": [
+        {
+          "__type": "bigint",
+          "__value": "0"
+        },
+        {
+          "__type": "bigint",
+          "__value": "9223372036854775807"
+        }
+      ],
+      "tags": [
+        "test",
+        "foo",
+        "bar"
+      ]
+    },
+    "MultiArr5": {
+      "xs": [
+        {
+          "__type": "bigint",
+          "__value": "9000000000"
+        },
+        {
+          "__type": "bigint",
+          "__value": "16000000000000000000"
+        }
+      ],
+      "ys": [
+        0,
+        0,
+        3.14
+      ],
+      "zs": [
+        false
+      ]
+    },
+    "OptCombo1": {
+      "req": "world",
+      "opt_a": 2147483647
+    },
+    "OptCombo2": {
+      "req": "world",
+      "opt_a": 2147483647,
+      "opt_b": false
+    },
+    "OptCombo3": {
+      "req": "world",
+      "opt_a": 2147483647,
+      "opt_b": false,
+      "opt_c": 2.718281828
+    },
+    "OptCombo4": {
+      "req": 0,
+      "opt_a": "test",
+      "opt_b": {
+        "type": "Buffer",
+        "data": [
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66
+        ]
+      }
+    },
+    "OptCombo5": {
+      "req1": "world",
+      "req2": 2147483647,
+      "opt_a": false,
+      "opt_b": 2.718281828
+    },
+    "OptCombo6": {
+      "req": "world",
+      "opt_s": "test",
+      "opt_i": -2147483648,
+      "opt_f": 2.718281828
+    },
+    "OptCombo7": {
+      "req": {
+        "__type": "bigint",
+        "__value": "0"
+      },
+      "opt_u64": {
+        "__type": "bigint",
+        "__value": "16000000000000000000"
+      },
+      "opt_str": "foo"
+    },
+    "OptCombo8": {
+      "a": "world",
+      "b": 2147483647,
+      "c": 0,
+      "d": true,
+      "f": {
+        "__type": "bigint",
+        "__value": "9223372036854775807"
+      }
+    },
+    "OptCombo9": {
+      "id": "world",
+      "name": "test",
+      "age": -2147483648,
+      "score": 2.718281828
+    },
+    "OptCombo10": {
+      "code": 0,
+      "msg": "test",
+      "detail": "foo",
+      "retry": true
+    },
+    "NestInner": {
+      "nested": {
+        "x": 0,
+        "y": 2147483647
+      }
+    },
+    "NestCoord": {
+      "nested": {
+        "lat": -3.14159265358979,
+        "lng": 0
+      }
+    },
+    "NestIdVal": {
+      "nested": {
+        "id": "world",
+        "value": 2147483647
+      }
+    },
+    "NestLabel": {
+      "nested": {
+        "key": "world",
+        "text": "test"
+      }
+    },
+    "NestMoney": {
+      "nested": {
+        "amount": {
+          "__type": "bigint",
+          "__value": "0"
+        },
+        "currency": "test"
+      }
+    },
+    "NestRange32": {
+      "nested": {
+        "min": 0,
+        "max": 2147483647
+      }
+    },
+    "NestAddr": {
+      "nested": {
+        "street": "world",
+        "city": "test",
+        "zip": "foo"
+      }
+    },
+    "NestPoint3": {
+      "nested": {
+        "x": -3.14159265358979,
+        "y": 0,
+        "z": 0
+      }
+    },
+    "OptNestInner": {
+      "label": "world",
+      "nested": {
+        "x": 0,
+        "y": 2147483647
+      }
+    },
+    "OptNestCoord": {
+      "label": "world",
+      "nested": {
+        "lat": -3.14159265358979,
+        "lng": 0
+      }
+    },
+    "OptNestIdVal": {
+      "label": "world",
+      "nested": {
+        "id": "world",
+        "value": 2147483647
+      }
+    },
+    "OptNestLabel": {
+      "label": "world",
+      "nested": {
+        "key": "world",
+        "text": "test"
+      }
+    },
+    "OptNestMoney": {
+      "label": "world",
+      "nested": {
+        "amount": {
+          "__type": "bigint",
+          "__value": "0"
+        },
+        "currency": "test"
+      }
+    },
+    "OptNestRange32": {
+      "label": "world",
+      "nested": {
+        "min": 0,
+        "max": 2147483647
+      }
+    },
+    "OptNestAddr": {
+      "label": "world",
+      "nested": {
+        "street": "world",
+        "city": "test",
+        "zip": "foo"
+      }
+    },
+    "OptNestPoint3": {
+      "label": "world",
+      "nested": {
+        "x": -3.14159265358979,
+        "y": 0,
+        "z": 0
+      }
+    },
+    "ModelArr1": {
+      "points": [
+        {
+          "x": 0,
+          "y": 2147483647
+        },
+        {
+          "x": 0,
+          "y": 2147483647
+        }
+      ]
+    },
+    "ModelArr2": {
+      "coords": [
+        {
+          "lat": -3.14159265358979,
+          "lng": 0
+        },
+        {
+          "lat": -3.14159265358979,
+          "lng": 0
+        }
+      ]
+    },
+    "ModelArr3": {
+      "items": [
+        {
+          "id": "world",
+          "value": 2147483647
+        },
+        {
+          "id": "world",
+          "value": 2147483647
+        }
+      ],
+      "tag": "test"
+    },
+    "ModelArr4": {
+      "labels": [
+        {
+          "key": "world",
+          "text": "test"
+        },
+        {
+          "key": "world",
+          "text": "test"
+        }
+      ],
+      "count": 2147483647
+    },
+    "ModelArr5": {
+      "arr": [
+        {
+          "amount": {
+            "__type": "bigint",
+            "__value": "0"
+          },
+          "currency": "test"
+        },
+        {
+          "amount": {
+            "__type": "bigint",
+            "__value": "0"
+          },
+          "currency": "test"
+        }
+      ],
+      "bs": [
+        {
+          "street": "world",
+          "city": "test",
+          "zip": "foo"
+        },
+        {
+          "street": "world",
+          "city": "test",
+          "zip": "foo"
+        },
+        {
+          "street": "world",
+          "city": "test",
+          "zip": "foo"
+        }
+      ]
+    },
+    "Mix01": {
+      "name": "world",
+      "value": 2147483647,
+      "point": {
+        "x": 0,
+        "y": 2147483647
+      }
+    },
+    "Mix02": {
+      "id": "world",
+      "loc": {
+        "lat": -3.14159265358979,
+        "lng": 0
+      },
+      "tags": [
+        "foo"
+      ]
+    },
+    "Mix03": {
+      "label": "world",
+      "value_range": {
+        "min": 0,
+        "max": 2147483647
+      },
+      "active": false
+    },
+    "Mix04": {
+      "title": "world",
+      "price": {
+        "amount": {
+          "__type": "bigint",
+          "__value": "0"
+        },
+        "currency": "test"
+      },
+      "inStock": false,
+      "rating": 2.718281828
+    },
+    "Mix05": {
+      "addr": {
+        "street": "world",
+        "city": "test",
+        "zip": "foo"
+      },
+      "coords": [
+        {
+          "lat": -3.14159265358979,
+          "lng": 0
+        },
+        {
+          "lat": -3.14159265358979,
+          "lng": 0
+        },
+        {
+          "lat": -3.14159265358979,
+          "lng": 0
+        }
+      ]
+    },
+    "Mix06": {
+      "name": "world",
+      "age": 2147483647,
+      "address": {
+        "street": "world",
+        "city": "test",
+        "zip": "foo"
+      },
+      "email": "bar"
+    },
+    "Mix07": {
+      "origin": {
+        "x": -3.14159265358979,
+        "y": 0,
+        "z": 0
+      },
+      "dest": {
+        "x": -3.14159265358979,
+        "y": 0,
+        "z": 0
+      },
+      "distance": 0
+    },
+    "Mix08": {
+      "keys": [
+        "world",
+        "test"
+      ],
+      "values": [
+        2147483647,
+        -2147483648,
+        -100000
+      ],
+      "meta": {
+        "key": "world",
+        "text": "test"
+      }
+    },
+    "Mix09": {
+      "id": {
+        "__type": "bigint",
+        "__value": "0"
+      },
+      "payload": {
+        "type": "Buffer",
+        "data": [
+          255
+        ]
+      },
+      "checksum": 4294967295,
+      "prev": {
+        "id": "world",
+        "value": 2147483647
+      }
+    },
+    "Mix10": {
+      "items": [
+        "world",
+        "test"
+      ],
+      "total": 2147483647,
+      "avg": 0,
+      "value_range": {
+        "min": 0,
+        "max": 2147483647
+      }
+    },
+    "Mix11": {
+      "name": "world",
+      "values": [
+        0,
+        0,
+        2.718281828
+      ],
+      "nested": {
+        "x": 0,
+        "y": 2147483647
+      },
+      "flag": true
+    },
+    "Mix12": {
+      "header": "world",
+      "entries": [
+        {
+          "id": "world",
+          "value": 2147483647
+        },
+        {
+          "id": "world",
+          "value": 2147483647
+        },
+        {
+          "id": "world",
+          "value": 2147483647
+        }
+      ],
+      "footer": "foo"
+    },
+    "Mix13": {
+      "a": 0,
+      "b": 0,
+      "c": "foo",
+      "d": true,
+      "e": {
+        "type": "Buffer",
+        "data": [
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255
+        ]
+      },
+      "nested": {
+        "x": 0,
+        "y": 2147483647
+      }
+    },
+    "Mix14": {
+      "amounts": [
+        {
+          "amount": {
+            "__type": "bigint",
+            "__value": "0"
+          },
+          "currency": "test"
+        },
+        {
+          "amount": {
+            "__type": "bigint",
+            "__value": "0"
+          },
+          "currency": "test"
+        }
+      ],
+      "total": {
+        "__type": "bigint",
+        "__value": "9223372036854775807"
+      },
+      "currency": "foo"
+    },
+    "Mix15": {
+      "src_addr": {
+        "street": "world",
+        "city": "test",
+        "zip": "foo"
+      },
+      "dst_addr": {
+        "street": "world",
+        "city": "test",
+        "zip": "foo"
+      },
+      "distance": 0,
+      "duration": 2.718281828
+    },
+    "AllOpt1": {},
+    "AllOpt2": {
+      "x": -3.14159265358979,
+      "y": {
+        "type": "Buffer",
+        "data": [
+          255
+        ]
+      },
+      "z": {
+        "__type": "bigint",
+        "__value": "-9223372036854775808"
+      }
+    },
+    "AllOpt3": {
+      "name": "world",
+      "age": 2147483647,
+      "score": 0,
+      "active": true
+    },
+    "AllOpt4": {
+      "a": 1000000000,
+      "b": {
+        "__type": "bigint",
+        "__value": "16000000000000000000"
+      },
+      "c": -2147483648,
+      "d": "bar"
+    },
+    "AllOpt5": {
+      "p": {
+        "x": 0,
+        "y": 2147483647
+      },
+      "q": "test"
+    },
+    "RecList": {
+      "value": 0,
+      "next": {
+        "value": 0,
+        "next": {
+          "value": 0
+        }
+      }
+    },
+    "RecTree": {
+      "value": "world",
+      "left_node": {
+        "value": "world",
+        "left_node": {
+          "value": "world"
+        },
+        "right_node": {
+          "value": "world"
+        }
+      },
+      "right_node": {
+        "value": "world",
+        "left_node": {
+          "value": "world"
+        },
+        "right_node": {
+          "value": "world"
+        }
+      }
+    },
+    "RecChain": {
+      "id": 0,
+      "label": "test",
+      "next": {
+        "id": 0,
+        "label": "test",
+        "next": {
+          "id": 0,
+          "label": "test"
+        }
+      }
+    },
+    "RecWrap": {
+      "payload": {
+        "type": "Buffer",
+        "data": [
+          0,
+          1,
+          2
+        ]
+      },
+      "nested": {
+        "payload": {
+          "type": "Buffer",
+          "data": [
+            0,
+            1,
+            2
+          ]
+        },
+        "nested": {
+          "payload": {
+            "type": "Buffer",
+            "data": [
+              0,
+              1,
+              2
+            ]
+          }
+        }
+      }
+    },
+    "RecWide": {
+      "a": 0,
+      "b": "test",
+      "c": 0,
+      "child": {
+        "a": 0,
+        "b": "test",
+        "c": 0,
+        "child": {
+          "a": 0,
+          "b": "test",
+          "c": 0
+        }
+      }
+    },
+    "Wide20": {
+      "f1": "world",
+      "f2": true,
+      "f3": -128,
+      "f4": -1000,
+      "f5": 0,
+      "f6": {
+        "__type": "bigint",
+        "__value": "9223372036854775807"
+      },
+      "f7": 255,
+      "f8": 0,
+      "f9": 1000000000,
+      "f10": {
+        "__type": "bigint",
+        "__value": "16000000000000000000"
+      },
+      "f11": 0,
+      "f12": 2.718281828,
+      "f13": {
+        "type": "Buffer",
+        "data": [
+          0,
+          1,
+          2
+        ]
+      },
+      "f14": "a\nb",
+      "f15": false,
+      "f16": -42,
+      "f17": 0,
+      "f18": 2147483647,
+      "f19": {
+        "__type": "bigint",
+        "__value": "-9223372036854775808"
+      },
+      "f20": 0
+    },
+    "Wide25": {
+      "f1": 10000,
+      "f2": 3000000000,
+      "f3": {
+        "__type": "bigint",
+        "__value": "18446744073709551615"
+      },
+      "f4": 3.14,
+      "f5": -3.14159265358979,
+      "f6": {
+        "type": "Buffer",
+        "data": [
+          222,
+          173,
+          190,
+          239
+        ]
+      },
+      "f7": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "f8": true,
+      "f9": 0,
+      "f10": 32767,
+      "f11": -2147483648,
+      "f12": {
+        "__type": "bigint",
+        "__value": "-9000000000"
+      },
+      "f13": 128,
+      "f14": 50000,
+      "f15": 4294967295,
+      "f16": {
+        "__type": "bigint",
+        "__value": "0"
+      },
+      "f17": -1.5,
+      "f18": 0,
+      "f19": {
+        "type": "Buffer",
+        "data": [
+          0,
+          1,
+          2
+        ]
+      },
+      "f20": "test",
+      "f21": false,
+      "f22": 127,
+      "f23": -32768,
+      "f24": -100000,
+      "f25": {
+        "__type": "bigint",
+        "__value": "0"
+      }
+    },
+    "Wide30": {
+      "f1": false,
+      "f2": 127,
+      "f3": -32768,
+      "f4": -100000,
+      "f5": {
+        "__type": "bigint",
+        "__value": "0"
+      },
+      "f6": 200,
+      "f7": 65535,
+      "f8": 0,
+      "f9": {
+        "__type": "bigint",
+        "__value": "9000000000"
+      },
+      "f10": 0,
+      "f11": 0,
+      "f12": {
+        "type": "Buffer",
+        "data": [
+          222,
+          173,
+          190,
+          239
+        ]
+      },
+      "f13": "bar",
+      "f14": true,
+      "f15": -128,
+      "f16": -1000,
+      "f17": 0,
+      "f18": {
+        "__type": "bigint",
+        "__value": "9223372036854775807"
+      },
+      "f19": 255,
+      "f20": 0,
+      "f21": 1000000000,
+      "f22": {
+        "__type": "bigint",
+        "__value": "16000000000000000000"
+      },
+      "f23": 0,
+      "f24": 2.718281828,
+      "f25": {
+        "type": "Buffer",
+        "data": [
+          0,
+          1,
+          2
+        ]
+      },
+      "f26": "a\u0000b",
+      "f27": false,
+      "f28": -42,
+      "f29": 0,
+      "f30": 2147483647
+    },
+    "Wide35": {
+      "f1": 1000000000,
+      "f2": {
+        "__type": "bigint",
+        "__value": "16000000000000000000"
+      },
+      "f3": 0,
+      "f4": 2.718281828,
+      "f5": {
+        "type": "Buffer",
+        "data": [
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255
+        ]
+      },
+      "f6": "日本語",
+      "f7": false,
+      "f8": -42,
+      "f9": 0,
+      "f10": 2147483647,
+      "f11": {
+        "__type": "bigint",
+        "__value": "-9223372036854775808"
+      },
+      "f12": 0,
+      "f13": 10000,
+      "f14": 3000000000,
+      "f15": {
+        "__type": "bigint",
+        "__value": "18446744073709551615"
+      },
+      "f16": 3.14,
+      "f17": -3.14159265358979,
+      "f18": {
+        "type": "Buffer",
+        "data": [
+          222,
+          173,
+          190,
+          239
+        ]
+      },
+      "f19": "world",
+      "f20": true,
+      "f21": 0,
+      "f22": 32767,
+      "f23": -2147483648,
+      "f24": {
+        "__type": "bigint",
+        "__value": "-9000000000"
+      },
+      "f25": 128,
+      "f26": 50000,
+      "f27": 4294967295,
+      "f28": {
+        "__type": "bigint",
+        "__value": "0"
+      },
+      "f29": -1.5,
+      "f30": 0,
+      "f31": {
+        "type": "Buffer",
+        "data": [
+          0,
+          1,
+          2
+        ]
+      },
+      "f32": "a\nb",
+      "f33": false,
+      "f34": 127,
+      "f35": -32768
+    },
+    "Wide40": {
+      "f1": 0,
+      "f2": 32767,
+      "f3": -2147483648,
+      "f4": {
+        "__type": "bigint",
+        "__value": "-9000000000"
+      },
+      "f5": 128,
+      "f6": 50000,
+      "f7": 4294967295,
+      "f8": {
+        "__type": "bigint",
+        "__value": "0"
+      },
+      "f9": -1.5,
+      "f10": 0,
+      "f11": {
+        "type": "Buffer",
+        "data": [
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255
+        ]
+      },
+      "f12": "foo",
+      "f13": false,
+      "f14": 127,
+      "f15": -32768,
+      "f16": -100000,
+      "f17": {
+        "__type": "bigint",
+        "__value": "0"
+      },
+      "f18": 200,
+      "f19": 65535,
+      "f20": 0,
+      "f21": {
+        "__type": "bigint",
+        "__value": "9000000000"
+      },
+      "f22": 0,
+      "f23": 0,
+      "f24": {
+        "type": "Buffer",
+        "data": [
+          222,
+          173,
+          190,
+          239
+        ]
+      },
+      "f25": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "f26": true,
+      "f27": -128,
+      "f28": -1000,
+      "f29": 0,
+      "f30": {
+        "__type": "bigint",
+        "__value": "9223372036854775807"
+      },
+      "f31": 255,
+      "f32": 0,
+      "f33": 1000000000,
+      "f34": {
+        "__type": "bigint",
+        "__value": "16000000000000000000"
+      },
+      "f35": 0,
+      "f36": 2.718281828,
+      "f37": {
+        "type": "Buffer",
+        "data": [
+          0,
+          1,
+          2
+        ]
+      },
+      "f38": "test",
+      "f39": false,
+      "f40": -42
+    },
+    "EdgeEmpty": {},
+    "EdgeOneOpt": {},
+    "EdgeBigNums": {
+      "i8": -128,
+      "i16": -32768,
+      "i32": -2147483648,
+      "i64": {
+        "__type": "bigint",
+        "__value": "-9223372036854775808"
+      },
+      "u8": 255,
+      "u16": 65535,
+      "u32": 4294967295,
+      "u64": {
+        "__type": "bigint",
+        "__value": "18446744073709551615"
+      }
+    },
+    "EdgeZeroVals": {
+      "s": "world",
+      "i": 2147483647,
+      "f": 0,
+      "b": true,
+      "by_field": {
+        "type": "Buffer",
+        "data": [
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255
+        ]
+      }
+    },
+    "EdgeNullable": {},
+    "EdgeNegZero": {
+      "v": 0
+    },
+    "EdgeNullByte": {
+      "s": "a\u0000b\u0000c",
+      "b": {
+        "type": "Buffer",
+        "data": [
+          0,
+          1,
+          0,
+          255
+        ]
+      }
+    },
+    "EdgeBoundary": {
+      "i32_neg129": -129,
+      "i32_128": 128,
+      "i32_256": 256,
+      "i32_65536": 65536,
+      "i32_neg32769": -32769,
+      "u32_65536": 65536
+    },
+    "EdgeStrLen": {
+      "s31": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "s32": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "s255": "ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+      "s256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+    },
+    "EdgeBytesLen": {
+      "b31": {
+        "type": "Buffer",
+        "data": [
+          170,
+          170,
+          170,
+          170,
+          170,
+          170,
+          170,
+          170,
+          170,
+          170,
+          170,
+          170,
+          170,
+          170,
+          170,
+          170,
+          170,
+          170,
+          170,
+          170,
+          170,
+          170,
+          170,
+          170,
+          170,
+          170,
+          170,
+          170,
+          170,
+          170,
+          170
+        ]
+      },
+      "b32": {
+        "type": "Buffer",
+        "data": [
+          187,
+          187,
+          187,
+          187,
+          187,
+          187,
+          187,
+          187,
+          187,
+          187,
+          187,
+          187,
+          187,
+          187,
+          187,
+          187,
+          187,
+          187,
+          187,
+          187,
+          187,
+          187,
+          187,
+          187,
+          187,
+          187,
+          187,
+          187,
+          187,
+          187,
+          187,
+          187
+        ]
+      },
+      "b255": {
+        "type": "Buffer",
+        "data": [
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204,
+          204
+        ]
+      },
+      "b256": {
+        "type": "Buffer",
+        "data": [
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221,
+          221
+        ]
+      }
+    },
+    "EdgeArrEmpty": {
+      "items": []
+    },
+    "EdgeArrBoundary": {
+      "a15": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "a16": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    "OptArr1": {
+      "req": "world",
+      "items": [
+        2147483647,
+        -2147483648,
+        -100000
+      ]
+    },
+    "OptArr2": {
+      "id": 0,
+      "names": [
+        "test",
+        "foo",
+        "bar"
+      ],
+      "flags": [
+        false
+      ]
+    },
+    "OptArr3": {},
+    "OptArr4": {
+      "payload": {
+        "type": "Buffer",
+        "data": [
+          0,
+          1,
+          2
+        ]
+      },
+      "chunks": [
+        {
+          "type": "Buffer",
+          "data": [
+            255
+          ]
+        },
+        {
+          "type": "Buffer",
+          "data": [
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66,
+            66
+          ]
+        },
+        {
+          "type": "Buffer",
+          "data": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    "OptArr5": {
+      "models": [
+        {
+          "x": 0,
+          "y": 2147483647
+        },
+        {
+          "x": 0,
+          "y": 2147483647
+        }
+      ],
+      "name": "test"
+    },
+    "NestOpt1": {
+      "outer": {
+        "key": "world",
+        "text": "test"
+      },
+      "name": "test"
+    },
+    "NestOpt2": {
+      "a": {
+        "id": "world",
+        "value": 2147483647
+      },
+      "b": {
+        "id": "world",
+        "value": 2147483647
+      },
+      "c": {
+        "id": "world",
+        "value": 2147483647
+      }
+    },
+    "NestOpt3": {
+      "money": {
+        "amount": {
+          "__type": "bigint",
+          "__value": "0"
+        },
+        "currency": "test"
+      },
+      "value_range": {
+        "min": 0,
+        "max": 2147483647
+      }
+    },
+    "NestOpt4": {
+      "addr": {
+        "street": "world",
+        "city": "test",
+        "zip": "foo"
+      },
+      "coord": {
+        "lat": -3.14159265358979,
+        "lng": 0
+      },
+      "name": "foo"
+    },
+    "NestOpt5": {
+      "point": {
+        "x": -3.14159265358979,
+        "y": 0,
+        "z": 0
+      },
+      "addr": {
+        "street": "world",
+        "city": "test",
+        "zip": "foo"
+      },
+      "label": {
+        "key": "world",
+        "text": "test"
+      }
+    },
+    "NestOptInner1": {
+      "tag": "empty"
+    },
+    "NestOptInner2": {
+      "tag": "world",
+      "nested": {
+        "name": "world",
+        "score": 0,
+        "tag": "foo"
+      }
+    },
+    "NestOptInner3": {},
+    "DeepNest1": {
+      "label": "world",
+      "nested": {
+        "street": "world",
+        "city": "test",
+        "zip": "foo"
+      }
+    },
+    "DeepNest2": {
+      "name": "world",
+      "money": {
+        "amount": {
+          "__type": "bigint",
+          "__value": "0"
+        },
+        "currency": "test"
+      },
+      "addr": {
+        "street": "world",
+        "city": "test",
+        "zip": "foo"
+      }
+    },
+    "DeepNest3": {
+      "title": "world",
+      "point": {
+        "x": -3.14159265358979,
+        "y": 0,
+        "z": 0
+      },
+      "value_range": {
+        "min": 0,
+        "max": 2147483647
+      },
+      "money": {
+        "amount": {
+          "__type": "bigint",
+          "__value": "0"
+        },
+        "currency": "test"
+      }
+    },
+    "DeepNest4": {
+      "coords": [
+        {
+          "lat": -3.14159265358979,
+          "lng": 0
+        },
+        {
+          "lat": -3.14159265358979,
+          "lng": 0
+        }
+      ],
+      "nested": {
+        "x": 0,
+        "y": 2147483647
+      },
+      "tag": "foo"
+    },
+    "DeepNest5": {
+      "labels": [
+        {
+          "key": "world",
+          "text": "test"
+        },
+        {
+          "key": "world",
+          "text": "test"
+        }
+      ],
+      "money": {
+        "amount": {
+          "__type": "bigint",
+          "__value": "0"
+        },
+        "currency": "test"
+      },
+      "name": "foo"
+    },
+    "DeepNest6": {
+      "items": [
+        {
+          "id": "world",
+          "value": 2147483647
+        },
+        {
+          "id": "world",
+          "value": 2147483647
+        }
+      ],
+      "addr": {
+        "street": "world",
+        "city": "test",
+        "zip": "foo"
+      },
+      "coord": {
+        "lat": -3.14159265358979,
+        "lng": 0
+      }
+    },
+    "DeepNest7": {
+      "a": {
+        "street": "world",
+        "city": "test",
+        "zip": "foo"
+      },
+      "b": {
+        "street": "world",
+        "city": "test",
+        "zip": "foo"
+      },
+      "c": {
+        "street": "world",
+        "city": "test",
+        "zip": "foo"
+      }
+    },
+    "TimestampEntry": {
+      "ts": {
+        "__type": "bigint",
+        "__value": "0"
+      },
+      "event": "test",
+      "payload": {
+        "type": "Buffer",
+        "data": [
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66,
+          66
+        ]
+      }
+    },
+    "ConfigEntry": {
+      "key": "world",
+      "intValue": 2147483647,
+      "strValue": "foo",
+      "boolValue": true
+    },
+    "NestedSimple": {
+      "name": "world",
+      "value": 2147483647
+    },
+    "DeepModel": {
+      "payload": {
+        "type": "Buffer",
+        "data": [
+          0,
+          1,
+          2
+        ]
+      },
+      "count": {
+        "__type": "bigint",
+        "__value": "9223372036854775807"
+      }
+    },
+    "EnumHolder": {
+      "color": "Green",
+      "priority": "High",
+      "status": "Archived"
+    },
+    "OptEnumHolder": {
+      "color": "Green",
+      "priority": "High"
+    },
+    "EnumArrayHolder": {
+      "colors": [
+        "Green",
+        "Blue"
+      ]
+    },
+    "EnumMixedHolder": {
+      "status": "Inactive",
+      "name": "test",
+      "count": -2147483648,
+      "active": true
+    },
+    "UnionFieldHolder": {
+      "shape": {
+        "rect": {
+          "min": 0,
+          "max": 2147483647
+        }
+      },
+      "id": {
+        "name": "test"
+      }
+    },
+    "OptUnionFieldHolder": {
+      "shape": {
+        "rect": {
+          "min": 0,
+          "max": 2147483647
+        }
+      },
+      "name": "test"
+    },
+    "UnionArrayHolder": {
+      "shapes": [
+        {
+          "rect": {
+            "min": 0,
+            "max": 2147483647
+          }
+        },
+        {
+          "circle": {
+            "lat": -3.14159265358979,
+            "lng": 0
+          }
+        }
+      ]
+    },
+    "UnionMixedHolder": {
+      "result": {
+        "err": {
+          "key": "world",
+          "text": "test"
+        }
+      },
+      "tag": {
+        "active": true
+      },
+      "count": -2147483648
+    },
+    "UnionScalarHolder": {
+      "id": {
+        "number": 0
+      },
+      "sc": {
+        "f": 0
+      },
+      "label": "foo"
+    }
+  },
+  "testModels": [
+    "OptInner",
+    "SingleString",
+    "SingleBoolean",
+    "SingleInt8",
+    "SingleInt16",
+    "SingleInt32",
+    "SingleInt64",
+    "SingleUint8",
+    "SingleUint16",
+    "SingleUint32",
+    "SingleUint64",
+    "SingleFloat32",
+    "SingleFloat64",
+    "SingleBytes",
+    "OptSingleString",
+    "OptSingleBoolean",
+    "OptSingleInt8",
+    "OptSingleInt16",
+    "OptSingleInt32",
+    "OptSingleInt64",
+    "OptSingleUint8",
+    "OptSingleUint16",
+    "OptSingleUint32",
+    "OptSingleUint64",
+    "OptSingleFloat32",
+    "OptSingleFloat64",
+    "OptSingleBytes",
+    "PairString",
+    "PairBoolean",
+    "PairInt8",
+    "PairInt16",
+    "PairInt32",
+    "PairInt64",
+    "PairUint8",
+    "PairUint16",
+    "PairUint32",
+    "PairUint64",
+    "PairFloat32",
+    "PairFloat64",
+    "PairBytes",
+    "DualStringInt32",
+    "DualStringBoolean",
+    "DualStringFloat64",
+    "DualStringBytes",
+    "DualInt32Boolean",
+    "DualInt32Float64",
+    "DualInt32Int64",
+    "DualInt32Uint32",
+    "DualInt64Uint64",
+    "DualFloat32Float64",
+    "DualFloat64Boolean",
+    "DualFloat64Bytes",
+    "DualUint32Uint64",
+    "DualBooleanBytes",
+    "DualInt8Uint8",
+    "DualInt16Uint16",
+    "DualStringInt64",
+    "DualStringUint64",
+    "DualInt32Bytes",
+    "DualFloat64Int32",
+    "DualBooleanInt32",
+    "DualBytesInt64",
+    "DualInt8Float32",
+    "DualUint8Int16",
+    "DualInt64Float64",
+    "DualUint64String",
+    "Triple01",
+    "Triple02",
+    "Triple03",
+    "Triple04",
+    "Triple05",
+    "Triple06",
+    "Triple07",
+    "Triple08",
+    "Triple09",
+    "Triple10",
+    "Triple11",
+    "Triple12",
+    "Triple13",
+    "Triple14",
+    "Triple15",
+    "Five01",
+    "Five02",
+    "Five03",
+    "Five04",
+    "Five05",
+    "Five06",
+    "Five07",
+    "Five08",
+    "Five09",
+    "Five10",
+    "Ten01",
+    "Ten02",
+    "Ten03",
+    "Ten04",
+    "Ten05",
+    "ArrString",
+    "ArrInt32",
+    "ArrBoolean",
+    "ArrFloat64",
+    "ArrBytes",
+    "ArrInt64",
+    "ArrUint64",
+    "MultiArr1",
+    "MultiArr2",
+    "MultiArr3",
+    "MultiArr4",
+    "MultiArr5",
+    "OptCombo1",
+    "OptCombo2",
+    "OptCombo3",
+    "OptCombo4",
+    "OptCombo5",
+    "OptCombo6",
+    "OptCombo7",
+    "OptCombo8",
+    "OptCombo9",
+    "OptCombo10",
+    "NestInner",
+    "NestCoord",
+    "NestIdVal",
+    "NestLabel",
+    "NestMoney",
+    "NestRange32",
+    "NestAddr",
+    "NestPoint3",
+    "OptNestInner",
+    "OptNestCoord",
+    "OptNestIdVal",
+    "OptNestLabel",
+    "OptNestMoney",
+    "OptNestRange32",
+    "OptNestAddr",
+    "OptNestPoint3",
+    "ModelArr1",
+    "ModelArr2",
+    "ModelArr3",
+    "ModelArr4",
+    "ModelArr5",
+    "Mix01",
+    "Mix02",
+    "Mix03",
+    "Mix04",
+    "Mix05",
+    "Mix06",
+    "Mix07",
+    "Mix08",
+    "Mix09",
+    "Mix10",
+    "Mix11",
+    "Mix12",
+    "Mix13",
+    "Mix14",
+    "Mix15",
+    "AllOpt1",
+    "AllOpt2",
+    "AllOpt3",
+    "AllOpt4",
+    "AllOpt5",
+    "RecList",
+    "RecTree",
+    "RecChain",
+    "RecWrap",
+    "RecWide",
+    "Wide20",
+    "Wide25",
+    "Wide30",
+    "Wide35",
+    "Wide40",
+    "EdgeEmpty",
+    "EdgeOneOpt",
+    "EdgeBigNums",
+    "EdgeZeroVals",
+    "EdgeNullable",
+    "EdgeNegZero",
+    "EdgeNullByte",
+    "EdgeBoundary",
+    "EdgeStrLen",
+    "EdgeBytesLen",
+    "EdgeArrEmpty",
+    "EdgeArrBoundary",
+    "OptArr1",
+    "OptArr2",
+    "OptArr3",
+    "OptArr4",
+    "OptArr5",
+    "NestOpt1",
+    "NestOpt2",
+    "NestOpt3",
+    "NestOpt4",
+    "NestOpt5",
+    "NestOptInner1",
+    "NestOptInner2",
+    "NestOptInner3",
+    "DeepNest1",
+    "DeepNest2",
+    "DeepNest3",
+    "DeepNest4",
+    "DeepNest5",
+    "DeepNest6",
+    "DeepNest7",
+    "TimestampEntry",
+    "ConfigEntry",
+    "NestedSimple",
+    "DeepModel",
+    "EnumHolder",
+    "OptEnumHolder",
+    "EnumArrayHolder",
+    "EnumMixedHolder",
+    "UnionFieldHolder",
+    "OptUnionFieldHolder",
+    "UnionArrayHolder",
+    "UnionMixedHolder",
+    "UnionScalarHolder"
+  ],
+  "modelNamespaces": {
+    "OptInner": "AllTypes",
+    "SingleString": "AllTypes.Scalars",
+    "SingleBoolean": "AllTypes.Scalars",
+    "SingleInt8": "AllTypes.Scalars",
+    "SingleInt16": "AllTypes.Scalars",
+    "SingleInt32": "AllTypes.Scalars",
+    "SingleInt64": "AllTypes.Scalars",
+    "SingleUint8": "AllTypes.Scalars",
+    "SingleUint16": "AllTypes.Scalars",
+    "SingleUint32": "AllTypes.Scalars",
+    "SingleUint64": "AllTypes.Scalars",
+    "SingleFloat32": "AllTypes.Scalars",
+    "SingleFloat64": "AllTypes.Scalars",
+    "SingleBytes": "AllTypes.Scalars",
+    "OptSingleString": "AllTypes.Opt",
+    "OptSingleBoolean": "AllTypes.Opt",
+    "OptSingleInt8": "AllTypes.Opt",
+    "OptSingleInt16": "AllTypes.Opt",
+    "OptSingleInt32": "AllTypes.Opt",
+    "OptSingleInt64": "AllTypes.Opt",
+    "OptSingleUint8": "AllTypes.Opt",
+    "OptSingleUint16": "AllTypes.Opt",
+    "OptSingleUint32": "AllTypes.Opt",
+    "OptSingleUint64": "AllTypes.Opt",
+    "OptSingleFloat32": "AllTypes.Opt",
+    "OptSingleFloat64": "AllTypes.Opt",
+    "OptSingleBytes": "AllTypes.Opt",
+    "PairString": "AllTypes.Pairs",
+    "PairBoolean": "AllTypes.Pairs",
+    "PairInt8": "AllTypes.Pairs",
+    "PairInt16": "AllTypes.Pairs",
+    "PairInt32": "AllTypes.Pairs",
+    "PairInt64": "AllTypes.Pairs",
+    "PairUint8": "AllTypes.Pairs",
+    "PairUint16": "AllTypes.Pairs",
+    "PairUint32": "AllTypes.Pairs",
+    "PairUint64": "AllTypes.Pairs",
+    "PairFloat32": "AllTypes.Pairs",
+    "PairFloat64": "AllTypes.Pairs",
+    "PairBytes": "AllTypes.Pairs",
+    "DualStringInt32": "AllTypes.Pairs",
+    "DualStringBoolean": "AllTypes.Pairs",
+    "DualStringFloat64": "AllTypes.Pairs",
+    "DualStringBytes": "AllTypes.Pairs",
+    "DualInt32Boolean": "AllTypes.Pairs",
+    "DualInt32Float64": "AllTypes.Pairs",
+    "DualInt32Int64": "AllTypes.Pairs",
+    "DualInt32Uint32": "AllTypes.Pairs",
+    "DualInt64Uint64": "AllTypes.Pairs",
+    "DualFloat32Float64": "AllTypes.Pairs",
+    "DualFloat64Boolean": "AllTypes.Pairs",
+    "DualFloat64Bytes": "AllTypes.Pairs",
+    "DualUint32Uint64": "AllTypes.Pairs",
+    "DualBooleanBytes": "AllTypes.Pairs",
+    "DualInt8Uint8": "AllTypes.Pairs",
+    "DualInt16Uint16": "AllTypes.Pairs",
+    "DualStringInt64": "AllTypes.Pairs",
+    "DualStringUint64": "AllTypes.Pairs",
+    "DualInt32Bytes": "AllTypes.Pairs",
+    "DualFloat64Int32": "AllTypes.Pairs",
+    "DualBooleanInt32": "AllTypes.Pairs",
+    "DualBytesInt64": "AllTypes.Pairs",
+    "DualInt8Float32": "AllTypes.Pairs",
+    "DualUint8Int16": "AllTypes.Pairs",
+    "DualInt64Float64": "AllTypes.Pairs",
+    "DualUint64String": "AllTypes.Pairs",
+    "Triple01": "AllTypes.Pairs",
+    "Triple02": "AllTypes.Pairs",
+    "Triple03": "AllTypes.Pairs",
+    "Triple04": "AllTypes.Pairs",
+    "Triple05": "AllTypes.Pairs",
+    "Triple06": "AllTypes.Pairs",
+    "Triple07": "AllTypes.Pairs",
+    "Triple08": "AllTypes.Pairs",
+    "Triple09": "AllTypes.Pairs",
+    "Triple10": "AllTypes.Pairs",
+    "Triple11": "AllTypes.Pairs",
+    "Triple12": "AllTypes.Pairs",
+    "Triple13": "AllTypes.Pairs",
+    "Triple14": "AllTypes.Pairs",
+    "Triple15": "AllTypes.Pairs",
+    "Five01": "AllTypes.Many",
+    "Five02": "AllTypes.Many",
+    "Five03": "AllTypes.Many",
+    "Five04": "AllTypes.Many",
+    "Five05": "AllTypes.Many",
+    "Five06": "AllTypes.Many",
+    "Five07": "AllTypes.Many",
+    "Five08": "AllTypes.Many",
+    "Five09": "AllTypes.Many",
+    "Five10": "AllTypes.Many",
+    "Ten01": "AllTypes.Many",
+    "Ten02": "AllTypes.Many",
+    "Ten03": "AllTypes.Many",
+    "Ten04": "AllTypes.Many",
+    "Ten05": "AllTypes.Many",
+    "ArrString": "AllTypes.Arrays",
+    "ArrInt32": "AllTypes.Arrays",
+    "ArrBoolean": "AllTypes.Arrays",
+    "ArrFloat64": "AllTypes.Arrays",
+    "ArrBytes": "AllTypes.Arrays",
+    "ArrInt64": "AllTypes.Arrays",
+    "ArrUint64": "AllTypes.Arrays",
+    "MultiArr1": "AllTypes.Arrays",
+    "MultiArr2": "AllTypes.Arrays",
+    "MultiArr3": "AllTypes.Arrays",
+    "MultiArr4": "AllTypes.Arrays",
+    "MultiArr5": "AllTypes.Arrays",
+    "OptCombo1": "AllTypes.Arrays",
+    "OptCombo2": "AllTypes.Arrays",
+    "OptCombo3": "AllTypes.Arrays",
+    "OptCombo4": "AllTypes.Arrays",
+    "OptCombo5": "AllTypes.Arrays",
+    "OptCombo6": "AllTypes.Arrays",
+    "OptCombo7": "AllTypes.Arrays",
+    "OptCombo8": "AllTypes.Arrays",
+    "OptCombo9": "AllTypes.Arrays",
+    "OptCombo10": "AllTypes.Arrays",
+    "NestInner": "AllTypes.Nests",
+    "NestCoord": "AllTypes.Nests",
+    "NestIdVal": "AllTypes.Nests",
+    "NestLabel": "AllTypes.Nests",
+    "NestMoney": "AllTypes.Nests",
+    "NestRange32": "AllTypes.Nests",
+    "NestAddr": "AllTypes.Nests",
+    "NestPoint3": "AllTypes.Nests",
+    "OptNestInner": "AllTypes.Nests",
+    "OptNestCoord": "AllTypes.Nests",
+    "OptNestIdVal": "AllTypes.Nests",
+    "OptNestLabel": "AllTypes.Nests",
+    "OptNestMoney": "AllTypes.Nests",
+    "OptNestRange32": "AllTypes.Nests",
+    "OptNestAddr": "AllTypes.Nests",
+    "OptNestPoint3": "AllTypes.Nests",
+    "ModelArr1": "AllTypes.Mixed",
+    "ModelArr2": "AllTypes.Mixed",
+    "ModelArr3": "AllTypes.Mixed",
+    "ModelArr4": "AllTypes.Mixed",
+    "ModelArr5": "AllTypes.Mixed",
+    "Mix01": "AllTypes.Mixed",
+    "Mix02": "AllTypes.Mixed",
+    "Mix03": "AllTypes.Mixed",
+    "Mix04": "AllTypes.Mixed",
+    "Mix05": "AllTypes.Mixed",
+    "Mix06": "AllTypes.Mixed",
+    "Mix07": "AllTypes.Mixed",
+    "Mix08": "AllTypes.Mixed",
+    "Mix09": "AllTypes.Mixed",
+    "Mix10": "AllTypes.Mixed",
+    "Mix11": "AllTypes.Mixed",
+    "Mix12": "AllTypes.Mixed",
+    "Mix13": "AllTypes.Mixed",
+    "Mix14": "AllTypes.Mixed",
+    "Mix15": "AllTypes.Mixed",
+    "AllOpt1": "AllTypes.Mixed",
+    "AllOpt2": "AllTypes.Mixed",
+    "AllOpt3": "AllTypes.Mixed",
+    "AllOpt4": "AllTypes.Mixed",
+    "AllOpt5": "AllTypes.Mixed",
+    "RecList": "AllTypes.Recursive",
+    "RecTree": "AllTypes.Recursive",
+    "RecChain": "AllTypes.Recursive",
+    "RecWrap": "AllTypes.Recursive",
+    "RecWide": "AllTypes.Recursive",
+    "Wide20": "AllTypes.Wide",
+    "Wide25": "AllTypes.Wide",
+    "Wide30": "AllTypes.Wide",
+    "Wide35": "AllTypes.Wide",
+    "Wide40": "AllTypes.Wide",
+    "EdgeEmpty": "AllTypes.Edge",
+    "EdgeOneOpt": "AllTypes.Edge",
+    "EdgeBigNums": "AllTypes.Edge",
+    "EdgeZeroVals": "AllTypes.Edge",
+    "EdgeNullable": "AllTypes.Edge",
+    "EdgeNegZero": "AllTypes.Edge",
+    "EdgeNullByte": "AllTypes.Edge",
+    "EdgeBoundary": "AllTypes.Edge",
+    "EdgeStrLen": "AllTypes.Edge",
+    "EdgeBytesLen": "AllTypes.Edge",
+    "EdgeArrEmpty": "AllTypes.Edge",
+    "EdgeArrBoundary": "AllTypes.Edge",
+    "OptArr1": "AllTypes.Extra",
+    "OptArr2": "AllTypes.Extra",
+    "OptArr3": "AllTypes.Extra",
+    "OptArr4": "AllTypes.Extra",
+    "OptArr5": "AllTypes.Extra",
+    "NestOpt1": "AllTypes.Extra",
+    "NestOpt2": "AllTypes.Extra",
+    "NestOpt3": "AllTypes.Extra",
+    "NestOpt4": "AllTypes.Extra",
+    "NestOpt5": "AllTypes.Extra",
+    "NestOptInner1": "AllTypes.Extra",
+    "NestOptInner2": "AllTypes.Extra",
+    "NestOptInner3": "AllTypes.Extra",
+    "DeepNest1": "AllTypes.Extra",
+    "DeepNest2": "AllTypes.Extra",
+    "DeepNest3": "AllTypes.Extra",
+    "DeepNest4": "AllTypes.Extra",
+    "DeepNest5": "AllTypes.Extra",
+    "DeepNest6": "AllTypes.Extra",
+    "DeepNest7": "AllTypes.Extra",
+    "TimestampEntry": "AllTypes.Extra",
+    "ConfigEntry": "AllTypes.Extra",
+    "NestedSimple": "AllTypes.nested",
+    "DeepModel": "AllTypes.nested.deep",
+    "EnumHolder": "AllTypes.Enums",
+    "OptEnumHolder": "AllTypes.Enums",
+    "EnumArrayHolder": "AllTypes.Enums",
+    "EnumMixedHolder": "AllTypes.Enums",
+    "UnionFieldHolder": "AllTypes.Unions",
+    "OptUnionFieldHolder": "AllTypes.Unions",
+    "UnionArrayHolder": "AllTypes.Unions",
+    "UnionMixedHolder": "AllTypes.Unions",
+    "UnionScalarHolder": "AllTypes.Unions"
+  },
+  "enums": {
+    "Color": {
+      "members": [
+        {
+          "name": "Red",
+          "value": 0
+        },
+        {
+          "name": "Green",
+          "value": 1
+        },
+        {
+          "name": "Blue",
+          "value": 2
+        }
+      ],
+      "namespace": "AllTypes.Enums"
+    },
+    "Priority": {
+      "members": [
+        {
+          "name": "Low",
+          "value": 0
+        },
+        {
+          "name": "Medium",
+          "value": 1
+        },
+        {
+          "name": "High",
+          "value": 2
+        },
+        {
+          "name": "Critical",
+          "value": 3
+        }
+      ],
+      "namespace": "AllTypes.Enums"
+    },
+    "Status": {
+      "members": [
+        {
+          "name": "Active",
+          "value": 0
+        },
+        {
+          "name": "Inactive",
+          "value": 1
+        },
+        {
+          "name": "Pending",
+          "value": 2
+        },
+        {
+          "name": "Archived",
+          "value": 3
+        }
+      ],
+      "namespace": "AllTypes.Enums"
+    }
+  },
+  "unions": {
+    "Shape": {
+      "variants": [
+        {
+          "name": "circle",
+          "type": "Coord",
+          "isScalar": false
+        },
+        {
+          "name": "rect",
+          "type": "Range32",
+          "isScalar": false
+        }
+      ],
+      "namespace": "AllTypes.Unions"
+    },
+    "Ident": {
+      "variants": [
+        {
+          "name": "name",
+          "type": "string",
+          "isScalar": true
+        },
+        {
+          "name": "number",
+          "type": "int32",
+          "isScalar": true
+        }
+      ],
+      "namespace": "AllTypes.Unions"
+    },
+    "ResultMsg": {
+      "variants": [
+        {
+          "name": "ok",
+          "type": "string",
+          "isScalar": true
+        },
+        {
+          "name": "err",
+          "type": "Label",
+          "isScalar": false
+        }
+      ],
+      "namespace": "AllTypes.Unions"
+    },
+    "Tagged": {
+      "variants": [
+        {
+          "name": "tag",
+          "type": "string",
+          "isScalar": true
+        },
+        {
+          "name": "score",
+          "type": "float64",
+          "isScalar": true
+        },
+        {
+          "name": "active",
+          "type": "boolean",
+          "isScalar": true
+        }
+      ],
+      "namespace": "AllTypes.Unions"
+    },
+    "OptUnionHolder": {
+      "variants": [
+        {
+          "name": "shape",
+          "type": "Shape",
+          "isScalar": false
+        },
+        {
+          "name": "id",
+          "type": "Ident",
+          "isScalar": false
+        }
+      ],
+      "namespace": "AllTypes.Unions"
+    },
+    "MixedUnion": {
+      "variants": [
+        {
+          "name": "point",
+          "type": "Coord",
+          "isScalar": false
+        },
+        {
+          "name": "label",
+          "type": "string",
+          "isScalar": true
+        },
+        {
+          "name": "count",
+          "type": "int32",
+          "isScalar": true
+        }
+      ],
+      "namespace": "AllTypes.Unions"
+    },
+    "NestedUnion": {
+      "variants": [
+        {
+          "name": "result",
+          "type": "ResultMsg",
+          "isScalar": false
+        },
+        {
+          "name": "shape",
+          "type": "Shape",
+          "isScalar": false
+        }
+      ],
+      "namespace": "AllTypes.Unions"
+    },
+    "ScalarUnion": {
+      "variants": [
+        {
+          "name": "s",
+          "type": "string",
+          "isScalar": true
+        },
+        {
+          "name": "i",
+          "type": "int32",
+          "isScalar": true
+        },
+        {
+          "name": "f",
+          "type": "float64",
+          "isScalar": true
+        },
+        {
+          "name": "b",
+          "type": "boolean",
+          "isScalar": true
+        }
+      ],
+      "namespace": "AllTypes.Unions"
+    }
+  },
+  "testUnions": [
+    "Shape_circle",
+    "Shape_rect",
+    "Ident_name",
+    "Ident_number",
+    "ResultMsg_ok",
+    "ResultMsg_err",
+    "Tagged_tag",
+    "Tagged_score",
+    "Tagged_active",
+    "OptUnionHolder_shape",
+    "OptUnionHolder_id",
+    "MixedUnion_point",
+    "MixedUnion_label",
+    "MixedUnion_count",
+    "NestedUnion_result",
+    "NestedUnion_shape",
+    "ScalarUnion_s",
+    "ScalarUnion_i",
+    "ScalarUnion_f",
+    "ScalarUnion_b"
+  ]
+}

@@ -1,0 +1,12 @@
+json = {};
+json.point = {};
+json.point.x = -3.14159265358979E0;
+json.point.y = 0E0;
+json.point.z = -0E0;
+json.addr = {};
+json.addr.street = "world";
+json.addr.city = "test";
+json.addr.zip = "foo";
+json.label = {};
+json.label.key = "world";
+json.label.text = "test";

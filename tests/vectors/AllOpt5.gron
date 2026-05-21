@@ -1,0 +1,5 @@
+json = {};
+json.p = {};
+json.p.x = 0;
+json.p.y = 2147483647;
+json.q = "test";

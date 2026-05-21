@@ -1,0 +1,5 @@
+json = {};
+json.req1 = "world";
+json.req2 = 2147483647;
+json.opt_a = false;
+json.opt_b = 2.718281828E0;

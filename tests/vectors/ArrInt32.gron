@@ -1,0 +1,4 @@
+json = {};
+json.items = [];
+json.items[0] = 0;
+json.items[1] = 2147483647;

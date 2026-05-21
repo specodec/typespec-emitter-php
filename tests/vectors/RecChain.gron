@@ -1,0 +1,9 @@
+json = {};
+json.id = 0;
+json.label = "test";
+json.next = {};
+json.next.id = 0;
+json.next.label = "test";
+json.next.next = {};
+json.next.next.id = 0;
+json.next.next.label = "test";

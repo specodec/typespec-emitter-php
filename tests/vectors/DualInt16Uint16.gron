@@ -1,0 +1,3 @@
+json = {};
+json.a = 0;
+json.b = 50000;

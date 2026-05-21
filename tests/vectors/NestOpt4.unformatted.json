@@ -1,0 +1,12 @@
+{
+"addr" :  {
+  "street":  "world",
+  "city"    :   "test",
+  "zip": "foo"
+},
+"coord" :   {
+  "lat"    :   -3.14159265358979,
+  "lng"   :0
+},
+"name"    :  "foo"
+}

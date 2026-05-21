@@ -1,0 +1,4 @@
+json = {};
+json.items = [];
+json.items[0] = -3.14159265358979E0;
+json.items[1] = 0E0;

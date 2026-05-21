@@ -1,0 +1,12 @@
+json = {};
+json.labels = [];
+json.labels[0] = {};
+json.labels[0].key = "world";
+json.labels[0].text = "test";
+json.labels[1] = {};
+json.labels[1].key = "world";
+json.labels[1].text = "test";
+json.money = {};
+json.money.amount = "0";
+json.money.currency = "test";
+json.name = "foo";

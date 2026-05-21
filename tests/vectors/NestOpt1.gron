@@ -1,0 +1,5 @@
+json = {};
+json.outer = {};
+json.outer.key = "world";
+json.outer.text = "test";
+json.name = "test";

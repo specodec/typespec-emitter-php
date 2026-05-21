@@ -1,0 +1,13 @@
+json = {};
+json.a = {};
+json.a.street = "world";
+json.a.city = "test";
+json.a.zip = "foo";
+json.b = {};
+json.b.street = "world";
+json.b.city = "test";
+json.b.zip = "foo";
+json.c = {};
+json.c.street = "world";
+json.c.city = "test";
+json.c.zip = "foo";

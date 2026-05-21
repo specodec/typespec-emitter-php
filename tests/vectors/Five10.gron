@@ -1,0 +1,6 @@
+json = {};
+json.f1 = "world";
+json.f2 = true;
+json.f3 = "-9223372036854775808";
+json.f4 = "0";
+json.f5 = -3.14159265358979E0;

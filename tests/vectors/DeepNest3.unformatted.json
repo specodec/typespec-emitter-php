@@ -1,0 +1,31 @@
+{
+
+"title":   "world",
+
+"point":    {
+
+"x"  :   -3.14159265358979,
+
+"y"   :    0,
+
+"z"    :  -0
+
+},
+
+"value_range" : {
+
+    "min"   : 0,
+
+    "max": 2147483647
+
+},
+
+"money"   :{
+
+  "amount"    :    "0",
+
+  "currency":"test"
+
+}
+
+}

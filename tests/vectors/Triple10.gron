@@ -1,0 +1,4 @@
+json = {};
+json.a = false;
+json.b = true;
+json.c = false;

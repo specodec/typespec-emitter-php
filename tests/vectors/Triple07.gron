@@ -1,0 +1,4 @@
+json = {};
+json.a = "AAEC";
+json.b = "test";
+json.c = -2147483648;

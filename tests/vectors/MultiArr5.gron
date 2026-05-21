@@ -1,0 +1,10 @@
+json = {};
+json.xs = [];
+json.xs[0] = "9000000000";
+json.xs[1] = "16000000000000000000";
+json.ys = [];
+json.ys[0] = 0E0;
+json.ys[1] = -0E0;
+json.ys[2] = 3.14E0;
+json.zs = [];
+json.zs[0] = false;

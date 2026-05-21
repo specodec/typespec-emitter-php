@@ -1,0 +1,4 @@
+json = {};
+json.nested = {};
+json.nested.amount = "0";
+json.nested.currency = "test";

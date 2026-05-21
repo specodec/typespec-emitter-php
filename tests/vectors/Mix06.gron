@@ -1,0 +1,8 @@
+json = {};
+json.name = "world";
+json.age = 2147483647;
+json.address = {};
+json.address.street = "world";
+json.address.city = "test";
+json.address.zip = "foo";
+json.email = "bar";

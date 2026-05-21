@@ -1,0 +1,4 @@
+json = {};
+json.name = "world";
+json.score = 0E0;
+json.tag = "foo";

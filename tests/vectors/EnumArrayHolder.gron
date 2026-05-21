@@ -1,0 +1,4 @@
+json = {};
+json.colors = [];
+json.colors[0] = "Green";
+json.colors[1] = "Blue";

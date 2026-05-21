@@ -1,0 +1,8 @@
+json = {};
+json.id = 0;
+json.names = [];
+json.names[0] = "test";
+json.names[1] = "foo";
+json.names[2] = "bar";
+json.flags = [];
+json.flags[0] = false;

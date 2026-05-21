@@ -1,0 +1,6 @@
+json = {};
+json.req = "world";
+json.items = [];
+json.items[0] = 2147483647;
+json.items[1] = -2147483648;
+json.items[2] = -100000;

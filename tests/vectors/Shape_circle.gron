@@ -1,0 +1,4 @@
+json = {};
+json.circle = {};
+json.circle.lat = -3.14159265358979E0;
+json.circle.lng = 0E0;

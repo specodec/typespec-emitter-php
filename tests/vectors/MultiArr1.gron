@@ -1,0 +1,8 @@
+json = {};
+json.names = [];
+json.names[0] = "world";
+json.names[1] = "test";
+json.scores = [];
+json.scores[0] = 2147483647;
+json.scores[1] = -2147483648;
+json.scores[2] = -100000;

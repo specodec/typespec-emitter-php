@@ -1,0 +1,6 @@
+json = {};
+json.name = "world";
+json.value = 2147483647;
+json.point = {};
+json.point.x = 0;
+json.point.y = 2147483647;

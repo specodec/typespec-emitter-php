@@ -1,0 +1,14 @@
+json = {};
+json.value = "world";
+json.left_node = {};
+json.left_node.value = "world";
+json.left_node.left_node = {};
+json.left_node.left_node.value = "world";
+json.left_node.right_node = {};
+json.left_node.right_node.value = "world";
+json.right_node = {};
+json.right_node.value = "world";
+json.right_node.left_node = {};
+json.right_node.left_node.value = "world";
+json.right_node.right_node = {};
+json.right_node.right_node.value = "world";

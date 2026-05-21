@@ -1,0 +1,6 @@
+json = {};
+json.f1 = -1.5E0;
+json.f2 = 0E0;
+json.f3 = -2147483648;
+json.f4 = "-9000000000";
+json.f5 = "a\nb";

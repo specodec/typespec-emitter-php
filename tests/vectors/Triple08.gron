@@ -1,0 +1,4 @@
+json = {};
+json.a = -1.5E0;
+json.b = 2147483647;
+json.c = false;

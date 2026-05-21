@@ -1,0 +1,6 @@
+json = {};
+json.value = 0;
+json.next = {};
+json.next.value = 0;
+json.next.next = {};
+json.next.next.value = 0;

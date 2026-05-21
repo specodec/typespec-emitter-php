@@ -1,0 +1,6 @@
+json = {};
+json.f1 = 128;
+json.f2 = 50000;
+json.f3 = 4294967295;
+json.f4 = -42;
+json.f5 = 0;

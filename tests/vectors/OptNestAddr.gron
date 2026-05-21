@@ -1,0 +1,6 @@
+json = {};
+json.label = "world";
+json.nested = {};
+json.nested.street = "world";
+json.nested.city = "test";
+json.nested.zip = "foo";

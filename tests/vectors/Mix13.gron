@@ -1,0 +1,9 @@
+json = {};
+json.a = 0;
+json.b = 0E0;
+json.c = "foo";
+json.d = true;
+json.e = "/////////////////////////////////////////////////////////////////////////////////////w==";
+json.nested = {};
+json.nested.x = 0;
+json.nested.y = 2147483647;

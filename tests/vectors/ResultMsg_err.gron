@@ -1,0 +1,4 @@
+json = {};
+json.err = {};
+json.err.key = "world";
+json.err.text = "test";

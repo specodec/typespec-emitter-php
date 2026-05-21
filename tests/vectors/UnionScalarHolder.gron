@@ -1,0 +1,6 @@
+json = {};
+json.id = {};
+json.id.number = 0;
+json.sc = {};
+json.sc.f = 0E0;
+json.label = "foo";

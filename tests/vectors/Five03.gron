@@ -1,0 +1,6 @@
+json = {};
+json.f1 = "world";
+json.f2 = "test";
+json.f3 = "foo";
+json.f4 = "bar";
+json.f5 = "a\nb";

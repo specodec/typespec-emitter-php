@@ -1,0 +1,11 @@
+json = {};
+json.f1 = 128;
+json.f2 = 50000;
+json.f3 = 4294967295;
+json.f4 = "0";
+json.f5 = -1.5E0;
+json.f6 = 0E0;
+json.f7 = "AAEC";
+json.f8 = "a\u0000b";
+json.f9 = false;
+json.f10 = 127;

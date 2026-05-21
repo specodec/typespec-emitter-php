@@ -1,0 +1,5 @@
+json = {};
+json.label = "world";
+json.nested = {};
+json.nested.min = 0;
+json.nested.max = 2147483647;

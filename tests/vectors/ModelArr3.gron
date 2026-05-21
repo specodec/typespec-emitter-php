@@ -1,0 +1,9 @@
+json = {};
+json.items = [];
+json.items[0] = {};
+json.items[0].id = "world";
+json.items[0].value = 2147483647;
+json.items[1] = {};
+json.items[1].id = "world";
+json.items[1].value = 2147483647;
+json.tag = "test";

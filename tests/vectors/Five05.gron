@@ -1,0 +1,6 @@
+json = {};
+json.f1 = "0";
+json.f2 = "16000000000000000000";
+json.f3 = "foo";
+json.f4 = 3.14E0;
+json.f5 = 0;

@@ -1,0 +1,13 @@
+json = {};
+json.header = "world";
+json.entries = [];
+json.entries[0] = {};
+json.entries[0].id = "world";
+json.entries[0].value = 2147483647;
+json.entries[1] = {};
+json.entries[1].id = "world";
+json.entries[1].value = 2147483647;
+json.entries[2] = {};
+json.entries[2].id = "world";
+json.entries[2].value = 2147483647;
+json.footer = "foo";

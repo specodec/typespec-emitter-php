@@ -1,0 +1,8 @@
+json = {};
+json.ids = [];
+json.ids[0] = "0";
+json.ids[1] = "9223372036854775807";
+json.tags = [];
+json.tags[0] = "test";
+json.tags[1] = "foo";
+json.tags[2] = "bar";

@@ -1,0 +1,4 @@
+json = {};
+json.req = "0";
+json.opt_u64 = "16000000000000000000";
+json.opt_str = "foo";

@@ -1,0 +1,7 @@
+{
+  "name": "specodec-emitter-php-tests",
+  "private": true,
+  "dependencies": {
+    "@specodec/typespec-emitter-php": "file:.."
+  }
+}

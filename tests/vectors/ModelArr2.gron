@@ -1,0 +1,8 @@
+json = {};
+json.coords = [];
+json.coords[0] = {};
+json.coords[0].lat = -3.14159265358979E0;
+json.coords[0].lng = 0E0;
+json.coords[1] = {};
+json.coords[1].lat = -3.14159265358979E0;
+json.coords[1].lng = 0E0;

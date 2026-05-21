@@ -1,0 +1,12 @@
+json = {};
+json.a = 0;
+json.b = "test";
+json.c = -0E0;
+json.child = {};
+json.child.a = 0;
+json.child.b = "test";
+json.child.c = -0E0;
+json.child.child = {};
+json.child.child.a = 0;
+json.child.child.b = "test";
+json.child.child.c = -0E0;

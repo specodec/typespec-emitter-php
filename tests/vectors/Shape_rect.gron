@@ -1,0 +1,4 @@
+json = {};
+json.rect = {};
+json.rect.min = 0;
+json.rect.max = 2147483647;

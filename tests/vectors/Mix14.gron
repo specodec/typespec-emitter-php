@@ -1,0 +1,10 @@
+json = {};
+json.amounts = [];
+json.amounts[0] = {};
+json.amounts[0].amount = "0";
+json.amounts[0].currency = "test";
+json.amounts[1] = {};
+json.amounts[1].amount = "0";
+json.amounts[1].currency = "test";
+json.total = "9223372036854775807";
+json.currency = "foo";

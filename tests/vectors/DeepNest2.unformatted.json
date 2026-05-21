@@ -1,0 +1,16 @@
+{
+
+"name" :   "world",
+
+"money"  :{
+	"amount" :    "0",
+	"currency"    :    "test"
+},
+
+"addr"  :   {
+    "street" :"world",
+    "city"   : "test",
+    "zip" :  "foo"
+}
+
+}

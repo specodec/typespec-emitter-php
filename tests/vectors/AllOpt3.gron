@@ -1,0 +1,5 @@
+json = {};
+json.name = "world";
+json.age = 2147483647;
+json.score = -0E0;
+json.active = true;

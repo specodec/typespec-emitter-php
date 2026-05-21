@@ -1,0 +1,4 @@
+json = {};
+json.a = "world";
+json.b = "test";
+json.c = -2147483648;

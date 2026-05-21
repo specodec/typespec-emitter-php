@@ -1,0 +1,5 @@
+json = {};
+json.label = "world";
+json.nested = {};
+json.nested.x = 0;
+json.nested.y = 2147483647;

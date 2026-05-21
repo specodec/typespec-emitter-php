@@ -1,0 +1,4 @@
+json = {};
+json.nested = {};
+json.nested.id = "world";
+json.nested.value = 2147483647;

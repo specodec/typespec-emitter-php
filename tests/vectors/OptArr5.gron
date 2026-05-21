@@ -1,0 +1,9 @@
+json = {};
+json.models = [];
+json.models[0] = {};
+json.models[0].x = 0;
+json.models[0].y = 2147483647;
+json.models[1] = {};
+json.models[1].x = 0;
+json.models[1].y = 2147483647;
+json.name = "test";

@@ -1,0 +1,11 @@
+json = {};
+json.src_addr = {};
+json.src_addr.street = "world";
+json.src_addr.city = "test";
+json.src_addr.zip = "foo";
+json.dst_addr = {};
+json.dst_addr.street = "world";
+json.dst_addr.city = "test";
+json.dst_addr.zip = "foo";
+json.distance = -0E0;
+json.duration = 2.718281828E0;

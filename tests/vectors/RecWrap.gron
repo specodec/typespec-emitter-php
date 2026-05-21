@@ -1,0 +1,6 @@
+json = {};
+json.payload = "AAEC";
+json.nested = {};
+json.nested.payload = "AAEC";
+json.nested.nested = {};
+json.nested.nested.payload = "AAEC";

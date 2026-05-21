@@ -1,0 +1,11 @@
+json = {};
+json.f1 = "world";
+json.f2 = true;
+json.f3 = -128;
+json.f4 = -1000;
+json.f5 = 0;
+json.f6 = "9223372036854775807";
+json.f7 = 255;
+json.f8 = 0;
+json.f9 = 1000000000;
+json.f10 = "16000000000000000000";

@@ -1,0 +1,13 @@
+{
+"point"  :{"x"   :  -3.14159265358979    ,    "y"  :0    ,    "z"    :   -0},
+"addr"    :   {
+
+"street": "world",
+
+"city"   :    "test",
+
+"zip"    : "foo"
+
+},
+"label"  :  {"key": "world"    , "text"    : "test"}
+}

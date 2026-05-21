@@ -1,0 +1,9 @@
+json = {};
+json.name = "world";
+json.money = {};
+json.money.amount = "0";
+json.money.currency = "test";
+json.addr = {};
+json.addr.street = "world";
+json.addr.city = "test";
+json.addr.zip = "foo";

@@ -1,0 +1,11 @@
+json = {};
+json.keys = [];
+json.keys[0] = "world";
+json.keys[1] = "test";
+json.values = [];
+json.values[0] = 2147483647;
+json.values[1] = -2147483648;
+json.values[2] = -100000;
+json.meta = {};
+json.meta.key = "world";
+json.meta.text = "test";

@@ -1,0 +1,11 @@
+json = {};
+json.f1 = "9000000000";
+json.f2 = 0E0;
+json.f3 = -0E0;
+json.f4 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==";
+json.f5 = "a\nb";
+json.f6 = true;
+json.f7 = -128;
+json.f8 = -1000;
+json.f9 = 0;
+json.f10 = "9223372036854775807";

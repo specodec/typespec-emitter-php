@@ -1,0 +1,5 @@
+json = {};
+json.key = "world";
+json.intValue = 2147483647;
+json.strValue = "foo";
+json.boolValue = true;

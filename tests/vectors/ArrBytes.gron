@@ -1,0 +1,4 @@
+json = {};
+json.items = [];
+json.items[0] = "AAEC";
+json.items[1] = "/w==";

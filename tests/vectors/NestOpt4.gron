@@ -1,0 +1,9 @@
+json = {};
+json.addr = {};
+json.addr.street = "world";
+json.addr.city = "test";
+json.addr.zip = "foo";
+json.coord = {};
+json.coord.lat = -3.14159265358979E0;
+json.coord.lng = 0E0;
+json.name = "foo";

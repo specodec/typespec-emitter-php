@@ -1,0 +1,8 @@
+json = {};
+json.points = [];
+json.points[0] = {};
+json.points[0].x = 0;
+json.points[0].y = 2147483647;
+json.points[1] = {};
+json.points[1].x = 0;
+json.points[1].y = 2147483647;

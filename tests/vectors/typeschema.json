@@ -1,0 +1,4416 @@
+{
+  "Inner": {
+    "fields": [
+      {
+        "name": "x",
+        "type": "int32"
+      },
+      {
+        "name": "y",
+        "type": "int32"
+      }
+    ],
+    "recursive": false
+  },
+  "Coord": {
+    "fields": [
+      {
+        "name": "lat",
+        "type": "float64"
+      },
+      {
+        "name": "lng",
+        "type": "float64"
+      }
+    ],
+    "recursive": false
+  },
+  "IdVal": {
+    "fields": [
+      {
+        "name": "id",
+        "type": "string"
+      },
+      {
+        "name": "value",
+        "type": "int32"
+      }
+    ],
+    "recursive": false
+  },
+  "Label": {
+    "fields": [
+      {
+        "name": "key",
+        "type": "string"
+      },
+      {
+        "name": "text",
+        "type": "string"
+      }
+    ],
+    "recursive": false
+  },
+  "Money": {
+    "fields": [
+      {
+        "name": "amount",
+        "type": "int64"
+      },
+      {
+        "name": "currency",
+        "type": "string"
+      }
+    ],
+    "recursive": false
+  },
+  "Range32": {
+    "fields": [
+      {
+        "name": "min",
+        "type": "int32"
+      },
+      {
+        "name": "max",
+        "type": "int32"
+      }
+    ],
+    "recursive": false
+  },
+  "Addr": {
+    "fields": [
+      {
+        "name": "street",
+        "type": "string"
+      },
+      {
+        "name": "city",
+        "type": "string"
+      },
+      {
+        "name": "zip",
+        "type": "string"
+      }
+    ],
+    "recursive": false
+  },
+  "Point3": {
+    "fields": [
+      {
+        "name": "x",
+        "type": "float64"
+      },
+      {
+        "name": "y",
+        "type": "float64"
+      },
+      {
+        "name": "z",
+        "type": "float64"
+      }
+    ],
+    "recursive": false
+  },
+  "OptInner": {
+    "fields": [
+      {
+        "name": "name",
+        "type": "string",
+        "optional": true
+      },
+      {
+        "name": "score",
+        "type": "float64",
+        "optional": true
+      },
+      {
+        "name": "tag",
+        "type": "string",
+        "optional": true
+      }
+    ],
+    "recursive": false
+  },
+  "SingleString": {
+    "fields": [
+      {
+        "name": "v",
+        "type": "string"
+      }
+    ],
+    "recursive": false
+  },
+  "SingleBoolean": {
+    "fields": [
+      {
+        "name": "v",
+        "type": "boolean"
+      }
+    ],
+    "recursive": false
+  },
+  "SingleInt8": {
+    "fields": [
+      {
+        "name": "v",
+        "type": "int8"
+      }
+    ],
+    "recursive": false
+  },
+  "SingleInt16": {
+    "fields": [
+      {
+        "name": "v",
+        "type": "int16"
+      }
+    ],
+    "recursive": false
+  },
+  "SingleInt32": {
+    "fields": [
+      {
+        "name": "v",
+        "type": "int32"
+      }
+    ],
+    "recursive": false
+  },
+  "SingleInt64": {
+    "fields": [
+      {
+        "name": "v",
+        "type": "int64"
+      }
+    ],
+    "recursive": false
+  },
+  "SingleUint8": {
+    "fields": [
+      {
+        "name": "v",
+        "type": "uint8"
+      }
+    ],
+    "recursive": false
+  },
+  "SingleUint16": {
+    "fields": [
+      {
+        "name": "v",
+        "type": "uint16"
+      }
+    ],
+    "recursive": false
+  },
+  "SingleUint32": {
+    "fields": [
+      {
+        "name": "v",
+        "type": "uint32"
+      }
+    ],
+    "recursive": false
+  },
+  "SingleUint64": {
+    "fields": [
+      {
+        "name": "v",
+        "type": "uint64"
+      }
+    ],
+    "recursive": false
+  },
+  "SingleFloat32": {
+    "fields": [
+      {
+        "name": "v",
+        "type": "float32"
+      }
+    ],
+    "recursive": false
+  },
+  "SingleFloat64": {
+    "fields": [
+      {
+        "name": "v",
+        "type": "float64"
+      }
+    ],
+    "recursive": false
+  },
+  "SingleBytes": {
+    "fields": [
+      {
+        "name": "v",
+        "type": "bytes"
+      }
+    ],
+    "recursive": false
+  },
+  "OptSingleString": {
+    "fields": [
+      {
+        "name": "v",
+        "type": "string",
+        "optional": true
+      }
+    ],
+    "recursive": false
+  },
+  "OptSingleBoolean": {
+    "fields": [
+      {
+        "name": "v",
+        "type": "boolean",
+        "optional": true
+      }
+    ],
+    "recursive": false
+  },
+  "OptSingleInt8": {
+    "fields": [
+      {
+        "name": "v",
+        "type": "int8",
+        "optional": true
+      }
+    ],
+    "recursive": false
+  },
+  "OptSingleInt16": {
+    "fields": [
+      {
+        "name": "v",
+        "type": "int16",
+        "optional": true
+      }
+    ],
+    "recursive": false
+  },
+  "OptSingleInt32": {
+    "fields": [
+      {
+        "name": "v",
+        "type": "int32",
+        "optional": true
+      }
+    ],
+    "recursive": false
+  },
+  "OptSingleInt64": {
+    "fields": [
+      {
+        "name": "v",
+        "type": "int64",
+        "optional": true
+      }
+    ],
+    "recursive": false
+  },
+  "OptSingleUint8": {
+    "fields": [
+      {
+        "name": "v",
+        "type": "uint8",
+        "optional": true
+      }
+    ],
+    "recursive": false
+  },
+  "OptSingleUint16": {
+    "fields": [
+      {
+        "name": "v",
+        "type": "uint16",
+        "optional": true
+      }
+    ],
+    "recursive": false
+  },
+  "OptSingleUint32": {
+    "fields": [
+      {
+        "name": "v",
+        "type": "uint32",
+        "optional": true
+      }
+    ],
+    "recursive": false
+  },
+  "OptSingleUint64": {
+    "fields": [
+      {
+        "name": "v",
+        "type": "uint64",
+        "optional": true
+      }
+    ],
+    "recursive": false
+  },
+  "OptSingleFloat32": {
+    "fields": [
+      {
+        "name": "v",
+        "type": "float32",
+        "optional": true
+      }
+    ],
+    "recursive": false
+  },
+  "OptSingleFloat64": {
+    "fields": [
+      {
+        "name": "v",
+        "type": "float64",
+        "optional": true
+      }
+    ],
+    "recursive": false
+  },
+  "OptSingleBytes": {
+    "fields": [
+      {
+        "name": "v",
+        "type": "bytes",
+        "optional": true
+      }
+    ],
+    "recursive": false
+  },
+  "PairString": {
+    "fields": [
+      {
+        "name": "a",
+        "type": "string"
+      },
+      {
+        "name": "b",
+        "type": "string"
+      }
+    ],
+    "recursive": false
+  },
+  "PairBoolean": {
+    "fields": [
+      {
+        "name": "a",
+        "type": "boolean"
+      },
+      {
+        "name": "b",
+        "type": "boolean"
+      }
+    ],
+    "recursive": false
+  },
+  "PairInt8": {
+    "fields": [
+      {
+        "name": "a",
+        "type": "int8"
+      },
+      {
+        "name": "b",
+        "type": "int8"
+      }
+    ],
+    "recursive": false
+  },
+  "PairInt16": {
+    "fields": [
+      {
+        "name": "a",
+        "type": "int16"
+      },
+      {
+        "name": "b",
+        "type": "int16"
+      }
+    ],
+    "recursive": false
+  },
+  "PairInt32": {
+    "fields": [
+      {
+        "name": "a",
+        "type": "int32"
+      },
+      {
+        "name": "b",
+        "type": "int32"
+      }
+    ],
+    "recursive": false
+  },
+  "PairInt64": {
+    "fields": [
+      {
+        "name": "a",
+        "type": "int64"
+      },
+      {
+        "name": "b",
+        "type": "int64"
+      }
+    ],
+    "recursive": false
+  },
+  "PairUint8": {
+    "fields": [
+      {
+        "name": "a",
+        "type": "uint8"
+      },
+      {
+        "name": "b",
+        "type": "uint8"
+      }
+    ],
+    "recursive": false
+  },
+  "PairUint16": {
+    "fields": [
+      {
+        "name": "a",
+        "type": "uint16"
+      },
+      {
+        "name": "b",
+        "type": "uint16"
+      }
+    ],
+    "recursive": false
+  },
+  "PairUint32": {
+    "fields": [
+      {
+        "name": "a",
+        "type": "uint32"
+      },
+      {
+        "name": "b",
+        "type": "uint32"
+      }
+    ],
+    "recursive": false
+  },
+  "PairUint64": {
+    "fields": [
+      {
+        "name": "a",
+        "type": "uint64"
+      },
+      {
+        "name": "b",
+        "type": "uint64"
+      }
+    ],
+    "recursive": false
+  },
+  "PairFloat32": {
+    "fields": [
+      {
+        "name": "a",
+        "type": "float32"
+      },
+      {
+        "name": "b",
+        "type": "float32"
+      }
+    ],
+    "recursive": false
+  },
+  "PairFloat64": {
+    "fields": [
+      {
+        "name": "a",
+        "type": "float64"
+      },
+      {
+        "name": "b",
+        "type": "float64"
+      }
+    ],
+    "recursive": false
+  },
+  "PairBytes": {
+    "fields": [
+      {
+        "name": "a",
+        "type": "bytes"
+      },
+      {
+        "name": "b",
+        "type": "bytes"
+      }
+    ],
+    "recursive": false
+  },
+  "DualStringInt32": {
+    "fields": [
+      {
+        "name": "a",
+        "type": "string"
+      },
+      {
+        "name": "b",
+        "type": "int32"
+      }
+    ],
+    "recursive": false
+  },
+  "DualStringBoolean": {
+    "fields": [
+      {
+        "name": "a",
+        "type": "string"
+      },
+      {
+        "name": "b",
+        "type": "boolean"
+      }
+    ],
+    "recursive": false
+  },
+  "DualStringFloat64": {
+    "fields": [
+      {
+        "name": "a",
+        "type": "string"
+      },
+      {
+        "name": "b",
+        "type": "float64"
+      }
+    ],
+    "recursive": false
+  },
+  "DualStringBytes": {
+    "fields": [
+      {
+        "name": "a",
+        "type": "string"
+      },
+      {
+        "name": "b",
+        "type": "bytes"
+      }
+    ],
+    "recursive": false
+  },
+  "DualInt32Boolean": {
+    "fields": [
+      {
+        "name": "a",
+        "type": "int32"
+      },
+      {
+        "name": "b",
+        "type": "boolean"
+      }
+    ],
+    "recursive": false
+  },
+  "DualInt32Float64": {
+    "fields": [
+      {
+        "name": "a",
+        "type": "int32"
+      },
+      {
+        "name": "b",
+        "type": "float64"
+      }
+    ],
+    "recursive": false
+  },
+  "DualInt32Int64": {
+    "fields": [
+      {
+        "name": "a",
+        "type": "int32"
+      },
+      {
+        "name": "b",
+        "type": "int64"
+      }
+    ],
+    "recursive": false
+  },
+  "DualInt32Uint32": {
+    "fields": [
+      {
+        "name": "a",
+        "type": "int32"
+      },
+      {
+        "name": "b",
+        "type": "uint32"
+      }
+    ],
+    "recursive": false
+  },
+  "DualInt64Uint64": {
+    "fields": [
+      {
+        "name": "a",
+        "type": "int64"
+      },
+      {
+        "name": "b",
+        "type": "uint64"
+      }
+    ],
+    "recursive": false
+  },
+  "DualFloat32Float64": {
+    "fields": [
+      {
+        "name": "a",
+        "type": "float32"
+      },
+      {
+        "name": "b",
+        "type": "float64"
+      }
+    ],
+    "recursive": false
+  },
+  "DualFloat64Boolean": {
+    "fields": [
+      {
+        "name": "a",
+        "type": "float64"
+      },
+      {
+        "name": "b",
+        "type": "boolean"
+      }
+    ],
+    "recursive": false
+  },
+  "DualFloat64Bytes": {
+    "fields": [
+      {
+        "name": "a",
+        "type": "float64"
+      },
+      {
+        "name": "b",
+        "type": "bytes"
+      }
+    ],
+    "recursive": false
+  },
+  "DualUint32Uint64": {
+    "fields": [
+      {
+        "name": "a",
+        "type": "uint32"
+      },
+      {
+        "name": "b",
+        "type": "uint64"
+      }
+    ],
+    "recursive": false
+  },
+  "DualBooleanBytes": {
+    "fields": [
+      {
+        "name": "a",
+        "type": "boolean"
+      },
+      {
+        "name": "b",
+        "type": "bytes"
+      }
+    ],
+    "recursive": false
+  },
+  "DualInt8Uint8": {
+    "fields": [
+      {
+        "name": "a",
+        "type": "int8"
+      },
+      {
+        "name": "b",
+        "type": "uint8"
+      }
+    ],
+    "recursive": false
+  },
+  "DualInt16Uint16": {
+    "fields": [
+      {
+        "name": "a",
+        "type": "int16"
+      },
+      {
+        "name": "b",
+        "type": "uint16"
+      }
+    ],
+    "recursive": false
+  },
+  "DualStringInt64": {
+    "fields": [
+      {
+        "name": "a",
+        "type": "string"
+      },
+      {
+        "name": "b",
+        "type": "int64"
+      }
+    ],
+    "recursive": false
+  },
+  "DualStringUint64": {
+    "fields": [
+      {
+        "name": "a",
+        "type": "string"
+      },
+      {
+        "name": "b",
+        "type": "uint64"
+      }
+    ],
+    "recursive": false
+  },
+  "DualInt32Bytes": {
+    "fields": [
+      {
+        "name": "a",
+        "type": "int32"
+      },
+      {
+        "name": "b",
+        "type": "bytes"
+      }
+    ],
+    "recursive": false
+  },
+  "DualFloat64Int32": {
+    "fields": [
+      {
+        "name": "a",
+        "type": "float64"
+      },
+      {
+        "name": "b",
+        "type": "int32"
+      }
+    ],
+    "recursive": false
+  },
+  "DualBooleanInt32": {
+    "fields": [
+      {
+        "name": "a",
+        "type": "boolean"
+      },
+      {
+        "name": "b",
+        "type": "int32"
+      }
+    ],
+    "recursive": false
+  },
+  "DualBytesInt64": {
+    "fields": [
+      {
+        "name": "a",
+        "type": "bytes"
+      },
+      {
+        "name": "b",
+        "type": "int64"
+      }
+    ],
+    "recursive": false
+  },
+  "DualInt8Float32": {
+    "fields": [
+      {
+        "name": "a",
+        "type": "int8"
+      },
+      {
+        "name": "b",
+        "type": "float32"
+      }
+    ],
+    "recursive": false
+  },
+  "DualUint8Int16": {
+    "fields": [
+      {
+        "name": "a",
+        "type": "uint8"
+      },
+      {
+        "name": "b",
+        "type": "int16"
+      }
+    ],
+    "recursive": false
+  },
+  "DualInt64Float64": {
+    "fields": [
+      {
+        "name": "a",
+        "type": "int64"
+      },
+      {
+        "name": "b",
+        "type": "float64"
+      }
+    ],
+    "recursive": false
+  },
+  "DualUint64String": {
+    "fields": [
+      {
+        "name": "a",
+        "type": "uint64"
+      },
+      {
+        "name": "b",
+        "type": "string"
+      }
+    ],
+    "recursive": false
+  },
+  "Triple01": {
+    "fields": [
+      {
+        "name": "a",
+        "type": "string"
+      },
+      {
+        "name": "b",
+        "type": "int32"
+      },
+      {
+        "name": "c",
+        "type": "boolean"
+      }
+    ],
+    "recursive": false
+  },
+  "Triple02": {
+    "fields": [
+      {
+        "name": "a",
+        "type": "float64"
+      },
+      {
+        "name": "b",
+        "type": "float64"
+      },
+      {
+        "name": "c",
+        "type": "float64"
+      }
+    ],
+    "recursive": false
+  },
+  "Triple03": {
+    "fields": [
+      {
+        "name": "a",
+        "type": "int32"
+      },
+      {
+        "name": "b",
+        "type": "int32"
+      },
+      {
+        "name": "c",
+        "type": "int32"
+      }
+    ],
+    "recursive": false
+  },
+  "Triple04": {
+    "fields": [
+      {
+        "name": "a",
+        "type": "string"
+      },
+      {
+        "name": "b",
+        "type": "string"
+      },
+      {
+        "name": "c",
+        "type": "int32"
+      }
+    ],
+    "recursive": false
+  },
+  "Triple05": {
+    "fields": [
+      {
+        "name": "a",
+        "type": "int64"
+      },
+      {
+        "name": "b",
+        "type": "string"
+      },
+      {
+        "name": "c",
+        "type": "boolean"
+      }
+    ],
+    "recursive": false
+  },
+  "Triple06": {
+    "fields": [
+      {
+        "name": "a",
+        "type": "uint32"
+      },
+      {
+        "name": "b",
+        "type": "uint64"
+      },
+      {
+        "name": "c",
+        "type": "string"
+      }
+    ],
+    "recursive": false
+  },
+  "Triple07": {
+    "fields": [
+      {
+        "name": "a",
+        "type": "bytes"
+      },
+      {
+        "name": "b",
+        "type": "string"
+      },
+      {
+        "name": "c",
+        "type": "int32"
+      }
+    ],
+    "recursive": false
+  },
+  "Triple08": {
+    "fields": [
+      {
+        "name": "a",
+        "type": "float32"
+      },
+      {
+        "name": "b",
+        "type": "int32"
+      },
+      {
+        "name": "c",
+        "type": "boolean"
+      }
+    ],
+    "recursive": false
+  },
+  "Triple09": {
+    "fields": [
+      {
+        "name": "a",
+        "type": "string"
+      },
+      {
+        "name": "b",
+        "type": "int64"
+      },
+      {
+        "name": "c",
+        "type": "float64"
+      }
+    ],
+    "recursive": false
+  },
+  "Triple10": {
+    "fields": [
+      {
+        "name": "a",
+        "type": "boolean"
+      },
+      {
+        "name": "b",
+        "type": "boolean"
+      },
+      {
+        "name": "c",
+        "type": "boolean"
+      }
+    ],
+    "recursive": false
+  },
+  "Triple11": {
+    "fields": [
+      {
+        "name": "a",
+        "type": "int8"
+      },
+      {
+        "name": "b",
+        "type": "int16"
+      },
+      {
+        "name": "c",
+        "type": "int32"
+      }
+    ],
+    "recursive": false
+  },
+  "Triple12": {
+    "fields": [
+      {
+        "name": "a",
+        "type": "uint8"
+      },
+      {
+        "name": "b",
+        "type": "uint16"
+      },
+      {
+        "name": "c",
+        "type": "uint32"
+      }
+    ],
+    "recursive": false
+  },
+  "Triple13": {
+    "fields": [
+      {
+        "name": "a",
+        "type": "string"
+      },
+      {
+        "name": "b",
+        "type": "bytes"
+      },
+      {
+        "name": "c",
+        "type": "float64"
+      }
+    ],
+    "recursive": false
+  },
+  "Triple14": {
+    "fields": [
+      {
+        "name": "a",
+        "type": "int64"
+      },
+      {
+        "name": "b",
+        "type": "uint64"
+      },
+      {
+        "name": "c",
+        "type": "boolean"
+      }
+    ],
+    "recursive": false
+  },
+  "Triple15": {
+    "fields": [
+      {
+        "name": "a",
+        "type": "float64"
+      },
+      {
+        "name": "b",
+        "type": "string"
+      },
+      {
+        "name": "c",
+        "type": "bytes"
+      }
+    ],
+    "recursive": false
+  },
+  "Five01": {
+    "fields": [
+      {
+        "name": "f1",
+        "type": "string"
+      },
+      {
+        "name": "f2",
+        "type": "int32"
+      },
+      {
+        "name": "f3",
+        "type": "boolean"
+      },
+      {
+        "name": "f4",
+        "type": "float64"
+      },
+      {
+        "name": "f5",
+        "type": "bytes"
+      }
+    ],
+    "recursive": false
+  },
+  "Five02": {
+    "fields": [
+      {
+        "name": "f1",
+        "type": "int32"
+      },
+      {
+        "name": "f2",
+        "type": "int32"
+      },
+      {
+        "name": "f3",
+        "type": "int32"
+      },
+      {
+        "name": "f4",
+        "type": "int32"
+      },
+      {
+        "name": "f5",
+        "type": "int32"
+      }
+    ],
+    "recursive": false
+  },
+  "Five03": {
+    "fields": [
+      {
+        "name": "f1",
+        "type": "string"
+      },
+      {
+        "name": "f2",
+        "type": "string"
+      },
+      {
+        "name": "f3",
+        "type": "string"
+      },
+      {
+        "name": "f4",
+        "type": "string"
+      },
+      {
+        "name": "f5",
+        "type": "string"
+      }
+    ],
+    "recursive": false
+  },
+  "Five04": {
+    "fields": [
+      {
+        "name": "f1",
+        "type": "float64"
+      },
+      {
+        "name": "f2",
+        "type": "int32"
+      },
+      {
+        "name": "f3",
+        "type": "string"
+      },
+      {
+        "name": "f4",
+        "type": "boolean"
+      },
+      {
+        "name": "f5",
+        "type": "bytes"
+      }
+    ],
+    "recursive": false
+  },
+  "Five05": {
+    "fields": [
+      {
+        "name": "f1",
+        "type": "int64"
+      },
+      {
+        "name": "f2",
+        "type": "uint64"
+      },
+      {
+        "name": "f3",
+        "type": "string"
+      },
+      {
+        "name": "f4",
+        "type": "float32"
+      },
+      {
+        "name": "f5",
+        "type": "int32"
+      }
+    ],
+    "recursive": false
+  },
+  "Five06": {
+    "fields": [
+      {
+        "name": "f1",
+        "type": "boolean"
+      },
+      {
+        "name": "f2",
+        "type": "string"
+      },
+      {
+        "name": "f3",
+        "type": "int32"
+      },
+      {
+        "name": "f4",
+        "type": "float64"
+      },
+      {
+        "name": "f5",
+        "type": "uint32"
+      }
+    ],
+    "recursive": false
+  },
+  "Five07": {
+    "fields": [
+      {
+        "name": "f1",
+        "type": "bytes"
+      },
+      {
+        "name": "f2",
+        "type": "bytes"
+      },
+      {
+        "name": "f3",
+        "type": "string"
+      },
+      {
+        "name": "f4",
+        "type": "int32"
+      },
+      {
+        "name": "f5",
+        "type": "float64"
+      }
+    ],
+    "recursive": false
+  },
+  "Five08": {
+    "fields": [
+      {
+        "name": "f1",
+        "type": "uint8"
+      },
+      {
+        "name": "f2",
+        "type": "uint16"
+      },
+      {
+        "name": "f3",
+        "type": "uint32"
+      },
+      {
+        "name": "f4",
+        "type": "int8"
+      },
+      {
+        "name": "f5",
+        "type": "int16"
+      }
+    ],
+    "recursive": false
+  },
+  "Five09": {
+    "fields": [
+      {
+        "name": "f1",
+        "type": "float32"
+      },
+      {
+        "name": "f2",
+        "type": "float64"
+      },
+      {
+        "name": "f3",
+        "type": "int32"
+      },
+      {
+        "name": "f4",
+        "type": "int64"
+      },
+      {
+        "name": "f5",
+        "type": "string"
+      }
+    ],
+    "recursive": false
+  },
+  "Five10": {
+    "fields": [
+      {
+        "name": "f1",
+        "type": "string"
+      },
+      {
+        "name": "f2",
+        "type": "boolean"
+      },
+      {
+        "name": "f3",
+        "type": "int64"
+      },
+      {
+        "name": "f4",
+        "type": "uint64"
+      },
+      {
+        "name": "f5",
+        "type": "float64"
+      }
+    ],
+    "recursive": false
+  },
+  "Ten01": {
+    "fields": [
+      {
+        "name": "f1",
+        "type": "string"
+      },
+      {
+        "name": "f2",
+        "type": "boolean"
+      },
+      {
+        "name": "f3",
+        "type": "int8"
+      },
+      {
+        "name": "f4",
+        "type": "int16"
+      },
+      {
+        "name": "f5",
+        "type": "int32"
+      },
+      {
+        "name": "f6",
+        "type": "int64"
+      },
+      {
+        "name": "f7",
+        "type": "uint8"
+      },
+      {
+        "name": "f8",
+        "type": "uint16"
+      },
+      {
+        "name": "f9",
+        "type": "uint32"
+      },
+      {
+        "name": "f10",
+        "type": "uint64"
+      }
+    ],
+    "recursive": false
+  },
+  "Ten02": {
+    "fields": [
+      {
+        "name": "f1",
+        "type": "int16"
+      },
+      {
+        "name": "f2",
+        "type": "int32"
+      },
+      {
+        "name": "f3",
+        "type": "int64"
+      },
+      {
+        "name": "f4",
+        "type": "uint8"
+      },
+      {
+        "name": "f5",
+        "type": "uint16"
+      },
+      {
+        "name": "f6",
+        "type": "uint32"
+      },
+      {
+        "name": "f7",
+        "type": "uint64"
+      },
+      {
+        "name": "f8",
+        "type": "float32"
+      },
+      {
+        "name": "f9",
+        "type": "float64"
+      },
+      {
+        "name": "f10",
+        "type": "bytes"
+      }
+    ],
+    "recursive": false
+  },
+  "Ten03": {
+    "fields": [
+      {
+        "name": "f1",
+        "type": "uint8"
+      },
+      {
+        "name": "f2",
+        "type": "uint16"
+      },
+      {
+        "name": "f3",
+        "type": "uint32"
+      },
+      {
+        "name": "f4",
+        "type": "uint64"
+      },
+      {
+        "name": "f5",
+        "type": "float32"
+      },
+      {
+        "name": "f6",
+        "type": "float64"
+      },
+      {
+        "name": "f7",
+        "type": "bytes"
+      },
+      {
+        "name": "f8",
+        "type": "string"
+      },
+      {
+        "name": "f9",
+        "type": "boolean"
+      },
+      {
+        "name": "f10",
+        "type": "int8"
+      }
+    ],
+    "recursive": false
+  },
+  "Ten04": {
+    "fields": [
+      {
+        "name": "f1",
+        "type": "uint64"
+      },
+      {
+        "name": "f2",
+        "type": "float32"
+      },
+      {
+        "name": "f3",
+        "type": "float64"
+      },
+      {
+        "name": "f4",
+        "type": "bytes"
+      },
+      {
+        "name": "f5",
+        "type": "string"
+      },
+      {
+        "name": "f6",
+        "type": "boolean"
+      },
+      {
+        "name": "f7",
+        "type": "int8"
+      },
+      {
+        "name": "f8",
+        "type": "int16"
+      },
+      {
+        "name": "f9",
+        "type": "int32"
+      },
+      {
+        "name": "f10",
+        "type": "int64"
+      }
+    ],
+    "recursive": false
+  },
+  "Ten05": {
+    "fields": [
+      {
+        "name": "f1",
+        "type": "bytes"
+      },
+      {
+        "name": "f2",
+        "type": "string"
+      },
+      {
+        "name": "f3",
+        "type": "boolean"
+      },
+      {
+        "name": "f4",
+        "type": "int8"
+      },
+      {
+        "name": "f5",
+        "type": "int16"
+      },
+      {
+        "name": "f6",
+        "type": "int32"
+      },
+      {
+        "name": "f7",
+        "type": "int64"
+      },
+      {
+        "name": "f8",
+        "type": "uint8"
+      },
+      {
+        "name": "f9",
+        "type": "uint16"
+      },
+      {
+        "name": "f10",
+        "type": "uint32"
+      }
+    ],
+    "recursive": false
+  },
+  "ArrString": {
+    "fields": [
+      {
+        "name": "items",
+        "type": "string",
+        "isArray": true
+      }
+    ],
+    "recursive": false
+  },
+  "ArrInt32": {
+    "fields": [
+      {
+        "name": "items",
+        "type": "int32",
+        "isArray": true
+      }
+    ],
+    "recursive": false
+  },
+  "ArrBoolean": {
+    "fields": [
+      {
+        "name": "items",
+        "type": "boolean",
+        "isArray": true
+      }
+    ],
+    "recursive": false
+  },
+  "ArrFloat64": {
+    "fields": [
+      {
+        "name": "items",
+        "type": "float64",
+        "isArray": true
+      }
+    ],
+    "recursive": false
+  },
+  "ArrBytes": {
+    "fields": [
+      {
+        "name": "items",
+        "type": "bytes",
+        "isArray": true
+      }
+    ],
+    "recursive": false
+  },
+  "ArrInt64": {
+    "fields": [
+      {
+        "name": "items",
+        "type": "int64",
+        "isArray": true
+      }
+    ],
+    "recursive": false
+  },
+  "ArrUint64": {
+    "fields": [
+      {
+        "name": "items",
+        "type": "uint64",
+        "isArray": true
+      }
+    ],
+    "recursive": false
+  },
+  "MultiArr1": {
+    "fields": [
+      {
+        "name": "names",
+        "type": "string",
+        "isArray": true
+      },
+      {
+        "name": "scores",
+        "type": "int32",
+        "isArray": true
+      }
+    ],
+    "recursive": false
+  },
+  "MultiArr2": {
+    "fields": [
+      {
+        "name": "flags",
+        "type": "boolean",
+        "isArray": true
+      },
+      {
+        "name": "values",
+        "type": "float64",
+        "isArray": true
+      },
+      {
+        "name": "payload",
+        "type": "bytes",
+        "isArray": true
+      }
+    ],
+    "recursive": false
+  },
+  "MultiArr3": {
+    "fields": [
+      {
+        "name": "a",
+        "type": "string",
+        "isArray": true
+      },
+      {
+        "name": "b",
+        "type": "int32",
+        "isArray": true
+      },
+      {
+        "name": "c",
+        "type": "float64",
+        "isArray": true
+      }
+    ],
+    "recursive": false
+  },
+  "MultiArr4": {
+    "fields": [
+      {
+        "name": "ids",
+        "type": "int64",
+        "isArray": true
+      },
+      {
+        "name": "tags",
+        "type": "string",
+        "isArray": true
+      }
+    ],
+    "recursive": false
+  },
+  "MultiArr5": {
+    "fields": [
+      {
+        "name": "xs",
+        "type": "uint64",
+        "isArray": true
+      },
+      {
+        "name": "ys",
+        "type": "float32",
+        "isArray": true
+      },
+      {
+        "name": "zs",
+        "type": "boolean",
+        "isArray": true
+      }
+    ],
+    "recursive": false
+  },
+  "OptCombo1": {
+    "fields": [
+      {
+        "name": "req",
+        "type": "string"
+      },
+      {
+        "name": "opt_a",
+        "type": "int32",
+        "optional": true
+      }
+    ],
+    "recursive": false
+  },
+  "OptCombo2": {
+    "fields": [
+      {
+        "name": "req",
+        "type": "string"
+      },
+      {
+        "name": "opt_a",
+        "type": "int32",
+        "optional": true
+      },
+      {
+        "name": "opt_b",
+        "type": "boolean",
+        "optional": true
+      }
+    ],
+    "recursive": false
+  },
+  "OptCombo3": {
+    "fields": [
+      {
+        "name": "req",
+        "type": "string"
+      },
+      {
+        "name": "opt_a",
+        "type": "int32",
+        "optional": true
+      },
+      {
+        "name": "opt_b",
+        "type": "boolean",
+        "optional": true
+      },
+      {
+        "name": "opt_c",
+        "type": "float64",
+        "optional": true
+      }
+    ],
+    "recursive": false
+  },
+  "OptCombo4": {
+    "fields": [
+      {
+        "name": "req",
+        "type": "int32"
+      },
+      {
+        "name": "opt_a",
+        "type": "string",
+        "optional": true
+      },
+      {
+        "name": "opt_b",
+        "type": "bytes",
+        "optional": true
+      }
+    ],
+    "recursive": false
+  },
+  "OptCombo5": {
+    "fields": [
+      {
+        "name": "req1",
+        "type": "string"
+      },
+      {
+        "name": "req2",
+        "type": "int32"
+      },
+      {
+        "name": "opt_a",
+        "type": "boolean",
+        "optional": true
+      },
+      {
+        "name": "opt_b",
+        "type": "float64",
+        "optional": true
+      }
+    ],
+    "recursive": false
+  },
+  "OptCombo6": {
+    "fields": [
+      {
+        "name": "req",
+        "type": "string"
+      },
+      {
+        "name": "opt_s",
+        "type": "string",
+        "optional": true
+      },
+      {
+        "name": "opt_i",
+        "type": "int32",
+        "optional": true
+      },
+      {
+        "name": "opt_f",
+        "type": "float64",
+        "optional": true
+      },
+      {
+        "name": "opt_b",
+        "type": "bytes",
+        "optional": true
+      }
+    ],
+    "recursive": false
+  },
+  "OptCombo7": {
+    "fields": [
+      {
+        "name": "req",
+        "type": "int64"
+      },
+      {
+        "name": "opt_u64",
+        "type": "uint64",
+        "optional": true
+      },
+      {
+        "name": "opt_str",
+        "type": "string",
+        "optional": true
+      }
+    ],
+    "recursive": false
+  },
+  "OptCombo8": {
+    "fields": [
+      {
+        "name": "a",
+        "type": "string"
+      },
+      {
+        "name": "b",
+        "type": "int32",
+        "optional": true
+      },
+      {
+        "name": "c",
+        "type": "float64",
+        "optional": true
+      },
+      {
+        "name": "d",
+        "type": "boolean",
+        "optional": true
+      },
+      {
+        "name": "e",
+        "type": "bytes",
+        "optional": true
+      },
+      {
+        "name": "f",
+        "type": "int64",
+        "optional": true
+      }
+    ],
+    "recursive": false
+  },
+  "OptCombo9": {
+    "fields": [
+      {
+        "name": "id",
+        "type": "string"
+      },
+      {
+        "name": "name",
+        "type": "string",
+        "optional": true
+      },
+      {
+        "name": "age",
+        "type": "int32",
+        "optional": true
+      },
+      {
+        "name": "score",
+        "type": "float64",
+        "optional": true
+      }
+    ],
+    "recursive": false
+  },
+  "OptCombo10": {
+    "fields": [
+      {
+        "name": "code",
+        "type": "int32"
+      },
+      {
+        "name": "msg",
+        "type": "string",
+        "optional": true
+      },
+      {
+        "name": "detail",
+        "type": "string",
+        "optional": true
+      },
+      {
+        "name": "retry",
+        "type": "boolean",
+        "optional": true
+      }
+    ],
+    "recursive": false
+  },
+  "NestInner": {
+    "fields": [
+      {
+        "name": "nested",
+        "type": "Inner",
+        "isModel": true
+      }
+    ],
+    "recursive": false
+  },
+  "NestCoord": {
+    "fields": [
+      {
+        "name": "nested",
+        "type": "Coord",
+        "isModel": true
+      }
+    ],
+    "recursive": false
+  },
+  "NestIdVal": {
+    "fields": [
+      {
+        "name": "nested",
+        "type": "IdVal",
+        "isModel": true
+      }
+    ],
+    "recursive": false
+  },
+  "NestLabel": {
+    "fields": [
+      {
+        "name": "nested",
+        "type": "Label",
+        "isModel": true
+      }
+    ],
+    "recursive": false
+  },
+  "NestMoney": {
+    "fields": [
+      {
+        "name": "nested",
+        "type": "Money",
+        "isModel": true
+      }
+    ],
+    "recursive": false
+  },
+  "NestRange32": {
+    "fields": [
+      {
+        "name": "nested",
+        "type": "Range32",
+        "isModel": true
+      }
+    ],
+    "recursive": false
+  },
+  "NestAddr": {
+    "fields": [
+      {
+        "name": "nested",
+        "type": "Addr",
+        "isModel": true
+      }
+    ],
+    "recursive": false
+  },
+  "NestPoint3": {
+    "fields": [
+      {
+        "name": "nested",
+        "type": "Point3",
+        "isModel": true
+      }
+    ],
+    "recursive": false
+  },
+  "OptNestInner": {
+    "fields": [
+      {
+        "name": "label",
+        "type": "string"
+      },
+      {
+        "name": "nested",
+        "type": "Inner",
+        "optional": true,
+        "isModel": true
+      }
+    ],
+    "recursive": false
+  },
+  "OptNestCoord": {
+    "fields": [
+      {
+        "name": "label",
+        "type": "string"
+      },
+      {
+        "name": "nested",
+        "type": "Coord",
+        "optional": true,
+        "isModel": true
+      }
+    ],
+    "recursive": false
+  },
+  "OptNestIdVal": {
+    "fields": [
+      {
+        "name": "label",
+        "type": "string"
+      },
+      {
+        "name": "nested",
+        "type": "IdVal",
+        "optional": true,
+        "isModel": true
+      }
+    ],
+    "recursive": false
+  },
+  "OptNestLabel": {
+    "fields": [
+      {
+        "name": "label",
+        "type": "string"
+      },
+      {
+        "name": "nested",
+        "type": "Label",
+        "optional": true,
+        "isModel": true
+      }
+    ],
+    "recursive": false
+  },
+  "OptNestMoney": {
+    "fields": [
+      {
+        "name": "label",
+        "type": "string"
+      },
+      {
+        "name": "nested",
+        "type": "Money",
+        "optional": true,
+        "isModel": true
+      }
+    ],
+    "recursive": false
+  },
+  "OptNestRange32": {
+    "fields": [
+      {
+        "name": "label",
+        "type": "string"
+      },
+      {
+        "name": "nested",
+        "type": "Range32",
+        "optional": true,
+        "isModel": true
+      }
+    ],
+    "recursive": false
+  },
+  "OptNestAddr": {
+    "fields": [
+      {
+        "name": "label",
+        "type": "string"
+      },
+      {
+        "name": "nested",
+        "type": "Addr",
+        "optional": true,
+        "isModel": true
+      }
+    ],
+    "recursive": false
+  },
+  "OptNestPoint3": {
+    "fields": [
+      {
+        "name": "label",
+        "type": "string"
+      },
+      {
+        "name": "nested",
+        "type": "Point3",
+        "optional": true,
+        "isModel": true
+      }
+    ],
+    "recursive": false
+  },
+  "ModelArr1": {
+    "fields": [
+      {
+        "name": "points",
+        "type": "Inner",
+        "isArray": true,
+        "isModel": true
+      }
+    ],
+    "recursive": false
+  },
+  "ModelArr2": {
+    "fields": [
+      {
+        "name": "coords",
+        "type": "Coord",
+        "isArray": true,
+        "isModel": true
+      }
+    ],
+    "recursive": false
+  },
+  "ModelArr3": {
+    "fields": [
+      {
+        "name": "items",
+        "type": "IdVal",
+        "isArray": true,
+        "isModel": true
+      },
+      {
+        "name": "tag",
+        "type": "string"
+      }
+    ],
+    "recursive": false
+  },
+  "ModelArr4": {
+    "fields": [
+      {
+        "name": "labels",
+        "type": "Label",
+        "isArray": true,
+        "isModel": true
+      },
+      {
+        "name": "count",
+        "type": "int32"
+      }
+    ],
+    "recursive": false
+  },
+  "ModelArr5": {
+    "fields": [
+      {
+        "name": "arr",
+        "type": "Money",
+        "isArray": true,
+        "isModel": true
+      },
+      {
+        "name": "bs",
+        "type": "Addr",
+        "isArray": true,
+        "isModel": true
+      }
+    ],
+    "recursive": false
+  },
+  "Mix01": {
+    "fields": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "value",
+        "type": "int32"
+      },
+      {
+        "name": "point",
+        "type": "Inner",
+        "isModel": true
+      }
+    ],
+    "recursive": false
+  },
+  "Mix02": {
+    "fields": [
+      {
+        "name": "id",
+        "type": "string"
+      },
+      {
+        "name": "loc",
+        "type": "Coord",
+        "isModel": true
+      },
+      {
+        "name": "tags",
+        "type": "string",
+        "isArray": true
+      }
+    ],
+    "recursive": false
+  },
+  "Mix03": {
+    "fields": [
+      {
+        "name": "label",
+        "type": "string"
+      },
+      {
+        "name": "value_range",
+        "type": "Range32",
+        "isModel": true
+      },
+      {
+        "name": "active",
+        "type": "boolean"
+      }
+    ],
+    "recursive": false
+  },
+  "Mix04": {
+    "fields": [
+      {
+        "name": "title",
+        "type": "string"
+      },
+      {
+        "name": "price",
+        "type": "Money",
+        "isModel": true
+      },
+      {
+        "name": "inStock",
+        "type": "boolean"
+      },
+      {
+        "name": "rating",
+        "type": "float64"
+      }
+    ],
+    "recursive": false
+  },
+  "Mix05": {
+    "fields": [
+      {
+        "name": "addr",
+        "type": "Addr",
+        "isModel": true
+      },
+      {
+        "name": "coords",
+        "type": "Coord",
+        "isArray": true,
+        "isModel": true
+      }
+    ],
+    "recursive": false
+  },
+  "Mix06": {
+    "fields": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "age",
+        "type": "int32"
+      },
+      {
+        "name": "address",
+        "type": "Addr",
+        "optional": true,
+        "isModel": true
+      },
+      {
+        "name": "email",
+        "type": "string",
+        "optional": true
+      }
+    ],
+    "recursive": false
+  },
+  "Mix07": {
+    "fields": [
+      {
+        "name": "origin",
+        "type": "Point3",
+        "isModel": true
+      },
+      {
+        "name": "dest",
+        "type": "Point3",
+        "isModel": true
+      },
+      {
+        "name": "distance",
+        "type": "float64"
+      }
+    ],
+    "recursive": false
+  },
+  "Mix08": {
+    "fields": [
+      {
+        "name": "keys",
+        "type": "string",
+        "isArray": true
+      },
+      {
+        "name": "values",
+        "type": "int32",
+        "isArray": true
+      },
+      {
+        "name": "meta",
+        "type": "Label",
+        "optional": true,
+        "isModel": true
+      }
+    ],
+    "recursive": false
+  },
+  "Mix09": {
+    "fields": [
+      {
+        "name": "id",
+        "type": "int64"
+      },
+      {
+        "name": "payload",
+        "type": "bytes"
+      },
+      {
+        "name": "checksum",
+        "type": "uint32"
+      },
+      {
+        "name": "prev",
+        "type": "IdVal",
+        "optional": true,
+        "isModel": true
+      }
+    ],
+    "recursive": false
+  },
+  "Mix10": {
+    "fields": [
+      {
+        "name": "items",
+        "type": "string",
+        "isArray": true
+      },
+      {
+        "name": "total",
+        "type": "int32"
+      },
+      {
+        "name": "avg",
+        "type": "float64"
+      },
+      {
+        "name": "value_range",
+        "type": "Range32",
+        "isModel": true
+      }
+    ],
+    "recursive": false
+  },
+  "Mix11": {
+    "fields": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "values",
+        "type": "float64",
+        "isArray": true
+      },
+      {
+        "name": "nested",
+        "type": "Inner",
+        "optional": true,
+        "isModel": true
+      },
+      {
+        "name": "flag",
+        "type": "boolean",
+        "optional": true
+      }
+    ],
+    "recursive": false
+  },
+  "Mix12": {
+    "fields": [
+      {
+        "name": "header",
+        "type": "string"
+      },
+      {
+        "name": "entries",
+        "type": "IdVal",
+        "isArray": true,
+        "isModel": true
+      },
+      {
+        "name": "footer",
+        "type": "string",
+        "optional": true
+      }
+    ],
+    "recursive": false
+  },
+  "Mix13": {
+    "fields": [
+      {
+        "name": "a",
+        "type": "int32"
+      },
+      {
+        "name": "b",
+        "type": "float64"
+      },
+      {
+        "name": "c",
+        "type": "string"
+      },
+      {
+        "name": "d",
+        "type": "boolean"
+      },
+      {
+        "name": "e",
+        "type": "bytes"
+      },
+      {
+        "name": "nested",
+        "type": "Inner",
+        "isModel": true
+      }
+    ],
+    "recursive": false
+  },
+  "Mix14": {
+    "fields": [
+      {
+        "name": "amounts",
+        "type": "Money",
+        "isArray": true,
+        "isModel": true
+      },
+      {
+        "name": "total",
+        "type": "int64"
+      },
+      {
+        "name": "currency",
+        "type": "string"
+      }
+    ],
+    "recursive": false
+  },
+  "Mix15": {
+    "fields": [
+      {
+        "name": "src_addr",
+        "type": "Addr",
+        "isModel": true
+      },
+      {
+        "name": "dst_addr",
+        "type": "Addr",
+        "isModel": true
+      },
+      {
+        "name": "distance",
+        "type": "float64"
+      },
+      {
+        "name": "duration",
+        "type": "float64"
+      }
+    ],
+    "recursive": false
+  },
+  "AllOpt1": {
+    "fields": [
+      {
+        "name": "a",
+        "type": "string",
+        "optional": true
+      },
+      {
+        "name": "b",
+        "type": "int32",
+        "optional": true
+      },
+      {
+        "name": "c",
+        "type": "boolean",
+        "optional": true
+      }
+    ],
+    "recursive": false
+  },
+  "AllOpt2": {
+    "fields": [
+      {
+        "name": "x",
+        "type": "float64",
+        "optional": true
+      },
+      {
+        "name": "y",
+        "type": "bytes",
+        "optional": true
+      },
+      {
+        "name": "z",
+        "type": "int64",
+        "optional": true
+      }
+    ],
+    "recursive": false
+  },
+  "AllOpt3": {
+    "fields": [
+      {
+        "name": "name",
+        "type": "string",
+        "optional": true
+      },
+      {
+        "name": "age",
+        "type": "int32",
+        "optional": true
+      },
+      {
+        "name": "score",
+        "type": "float64",
+        "optional": true
+      },
+      {
+        "name": "active",
+        "type": "boolean",
+        "optional": true
+      }
+    ],
+    "recursive": false
+  },
+  "AllOpt4": {
+    "fields": [
+      {
+        "name": "a",
+        "type": "uint32",
+        "optional": true
+      },
+      {
+        "name": "b",
+        "type": "uint64",
+        "optional": true
+      },
+      {
+        "name": "c",
+        "type": "int32",
+        "optional": true
+      },
+      {
+        "name": "d",
+        "type": "string",
+        "optional": true
+      },
+      {
+        "name": "e",
+        "type": "bytes",
+        "optional": true
+      }
+    ],
+    "recursive": false
+  },
+  "AllOpt5": {
+    "fields": [
+      {
+        "name": "p",
+        "type": "Inner",
+        "optional": true,
+        "isModel": true
+      },
+      {
+        "name": "q",
+        "type": "string",
+        "optional": true
+      }
+    ],
+    "recursive": false
+  },
+  "RecList": {
+    "fields": [
+      {
+        "name": "value",
+        "type": "int32"
+      },
+      {
+        "name": "next",
+        "type": "RecList",
+        "optional": true,
+        "isModel": true
+      }
+    ],
+    "recursive": true
+  },
+  "RecTree": {
+    "fields": [
+      {
+        "name": "value",
+        "type": "string"
+      },
+      {
+        "name": "left_node",
+        "type": "RecTree",
+        "optional": true,
+        "isModel": true
+      },
+      {
+        "name": "right_node",
+        "type": "RecTree",
+        "optional": true,
+        "isModel": true
+      }
+    ],
+    "recursive": true
+  },
+  "RecChain": {
+    "fields": [
+      {
+        "name": "id",
+        "type": "int32"
+      },
+      {
+        "name": "label",
+        "type": "string"
+      },
+      {
+        "name": "next",
+        "type": "RecChain",
+        "optional": true,
+        "isModel": true
+      }
+    ],
+    "recursive": true
+  },
+  "RecWrap": {
+    "fields": [
+      {
+        "name": "payload",
+        "type": "bytes"
+      },
+      {
+        "name": "nested",
+        "type": "RecWrap",
+        "optional": true,
+        "isModel": true
+      }
+    ],
+    "recursive": true
+  },
+  "RecWide": {
+    "fields": [
+      {
+        "name": "a",
+        "type": "int32"
+      },
+      {
+        "name": "b",
+        "type": "string"
+      },
+      {
+        "name": "c",
+        "type": "float64"
+      },
+      {
+        "name": "child",
+        "type": "RecWide",
+        "optional": true,
+        "isModel": true
+      }
+    ],
+    "recursive": true
+  },
+  "Wide20": {
+    "fields": [
+      {
+        "name": "f1",
+        "type": "string"
+      },
+      {
+        "name": "f2",
+        "type": "boolean"
+      },
+      {
+        "name": "f3",
+        "type": "int8"
+      },
+      {
+        "name": "f4",
+        "type": "int16"
+      },
+      {
+        "name": "f5",
+        "type": "int32"
+      },
+      {
+        "name": "f6",
+        "type": "int64"
+      },
+      {
+        "name": "f7",
+        "type": "uint8"
+      },
+      {
+        "name": "f8",
+        "type": "uint16"
+      },
+      {
+        "name": "f9",
+        "type": "uint32"
+      },
+      {
+        "name": "f10",
+        "type": "uint64"
+      },
+      {
+        "name": "f11",
+        "type": "float32"
+      },
+      {
+        "name": "f12",
+        "type": "float64"
+      },
+      {
+        "name": "f13",
+        "type": "bytes"
+      },
+      {
+        "name": "f14",
+        "type": "string"
+      },
+      {
+        "name": "f15",
+        "type": "boolean"
+      },
+      {
+        "name": "f16",
+        "type": "int8"
+      },
+      {
+        "name": "f17",
+        "type": "int16"
+      },
+      {
+        "name": "f18",
+        "type": "int32"
+      },
+      {
+        "name": "f19",
+        "type": "int64"
+      },
+      {
+        "name": "f20",
+        "type": "uint8"
+      }
+    ],
+    "recursive": false
+  },
+  "Wide25": {
+    "fields": [
+      {
+        "name": "f1",
+        "type": "uint16"
+      },
+      {
+        "name": "f2",
+        "type": "uint32"
+      },
+      {
+        "name": "f3",
+        "type": "uint64"
+      },
+      {
+        "name": "f4",
+        "type": "float32"
+      },
+      {
+        "name": "f5",
+        "type": "float64"
+      },
+      {
+        "name": "f6",
+        "type": "bytes"
+      },
+      {
+        "name": "f7",
+        "type": "string"
+      },
+      {
+        "name": "f8",
+        "type": "boolean"
+      },
+      {
+        "name": "f9",
+        "type": "int8"
+      },
+      {
+        "name": "f10",
+        "type": "int16"
+      },
+      {
+        "name": "f11",
+        "type": "int32"
+      },
+      {
+        "name": "f12",
+        "type": "int64"
+      },
+      {
+        "name": "f13",
+        "type": "uint8"
+      },
+      {
+        "name": "f14",
+        "type": "uint16"
+      },
+      {
+        "name": "f15",
+        "type": "uint32"
+      },
+      {
+        "name": "f16",
+        "type": "uint64"
+      },
+      {
+        "name": "f17",
+        "type": "float32"
+      },
+      {
+        "name": "f18",
+        "type": "float64"
+      },
+      {
+        "name": "f19",
+        "type": "bytes"
+      },
+      {
+        "name": "f20",
+        "type": "string"
+      },
+      {
+        "name": "f21",
+        "type": "boolean"
+      },
+      {
+        "name": "f22",
+        "type": "int8"
+      },
+      {
+        "name": "f23",
+        "type": "int16"
+      },
+      {
+        "name": "f24",
+        "type": "int32"
+      },
+      {
+        "name": "f25",
+        "type": "int64"
+      }
+    ],
+    "recursive": false
+  },
+  "Wide30": {
+    "fields": [
+      {
+        "name": "f1",
+        "type": "boolean"
+      },
+      {
+        "name": "f2",
+        "type": "int8"
+      },
+      {
+        "name": "f3",
+        "type": "int16"
+      },
+      {
+        "name": "f4",
+        "type": "int32"
+      },
+      {
+        "name": "f5",
+        "type": "int64"
+      },
+      {
+        "name": "f6",
+        "type": "uint8"
+      },
+      {
+        "name": "f7",
+        "type": "uint16"
+      },
+      {
+        "name": "f8",
+        "type": "uint32"
+      },
+      {
+        "name": "f9",
+        "type": "uint64"
+      },
+      {
+        "name": "f10",
+        "type": "float32"
+      },
+      {
+        "name": "f11",
+        "type": "float64"
+      },
+      {
+        "name": "f12",
+        "type": "bytes"
+      },
+      {
+        "name": "f13",
+        "type": "string"
+      },
+      {
+        "name": "f14",
+        "type": "boolean"
+      },
+      {
+        "name": "f15",
+        "type": "int8"
+      },
+      {
+        "name": "f16",
+        "type": "int16"
+      },
+      {
+        "name": "f17",
+        "type": "int32"
+      },
+      {
+        "name": "f18",
+        "type": "int64"
+      },
+      {
+        "name": "f19",
+        "type": "uint8"
+      },
+      {
+        "name": "f20",
+        "type": "uint16"
+      },
+      {
+        "name": "f21",
+        "type": "uint32"
+      },
+      {
+        "name": "f22",
+        "type": "uint64"
+      },
+      {
+        "name": "f23",
+        "type": "float32"
+      },
+      {
+        "name": "f24",
+        "type": "float64"
+      },
+      {
+        "name": "f25",
+        "type": "bytes"
+      },
+      {
+        "name": "f26",
+        "type": "string"
+      },
+      {
+        "name": "f27",
+        "type": "boolean"
+      },
+      {
+        "name": "f28",
+        "type": "int8"
+      },
+      {
+        "name": "f29",
+        "type": "int16"
+      },
+      {
+        "name": "f30",
+        "type": "int32"
+      }
+    ],
+    "recursive": false
+  },
+  "Wide35": {
+    "fields": [
+      {
+        "name": "f1",
+        "type": "uint32"
+      },
+      {
+        "name": "f2",
+        "type": "uint64"
+      },
+      {
+        "name": "f3",
+        "type": "float32"
+      },
+      {
+        "name": "f4",
+        "type": "float64"
+      },
+      {
+        "name": "f5",
+        "type": "bytes"
+      },
+      {
+        "name": "f6",
+        "type": "string"
+      },
+      {
+        "name": "f7",
+        "type": "boolean"
+      },
+      {
+        "name": "f8",
+        "type": "int8"
+      },
+      {
+        "name": "f9",
+        "type": "int16"
+      },
+      {
+        "name": "f10",
+        "type": "int32"
+      },
+      {
+        "name": "f11",
+        "type": "int64"
+      },
+      {
+        "name": "f12",
+        "type": "uint8"
+      },
+      {
+        "name": "f13",
+        "type": "uint16"
+      },
+      {
+        "name": "f14",
+        "type": "uint32"
+      },
+      {
+        "name": "f15",
+        "type": "uint64"
+      },
+      {
+        "name": "f16",
+        "type": "float32"
+      },
+      {
+        "name": "f17",
+        "type": "float64"
+      },
+      {
+        "name": "f18",
+        "type": "bytes"
+      },
+      {
+        "name": "f19",
+        "type": "string"
+      },
+      {
+        "name": "f20",
+        "type": "boolean"
+      },
+      {
+        "name": "f21",
+        "type": "int8"
+      },
+      {
+        "name": "f22",
+        "type": "int16"
+      },
+      {
+        "name": "f23",
+        "type": "int32"
+      },
+      {
+        "name": "f24",
+        "type": "int64"
+      },
+      {
+        "name": "f25",
+        "type": "uint8"
+      },
+      {
+        "name": "f26",
+        "type": "uint16"
+      },
+      {
+        "name": "f27",
+        "type": "uint32"
+      },
+      {
+        "name": "f28",
+        "type": "uint64"
+      },
+      {
+        "name": "f29",
+        "type": "float32"
+      },
+      {
+        "name": "f30",
+        "type": "float64"
+      },
+      {
+        "name": "f31",
+        "type": "bytes"
+      },
+      {
+        "name": "f32",
+        "type": "string"
+      },
+      {
+        "name": "f33",
+        "type": "boolean"
+      },
+      {
+        "name": "f34",
+        "type": "int8"
+      },
+      {
+        "name": "f35",
+        "type": "int16"
+      }
+    ],
+    "recursive": false
+  },
+  "Wide40": {
+    "fields": [
+      {
+        "name": "f1",
+        "type": "int8"
+      },
+      {
+        "name": "f2",
+        "type": "int16"
+      },
+      {
+        "name": "f3",
+        "type": "int32"
+      },
+      {
+        "name": "f4",
+        "type": "int64"
+      },
+      {
+        "name": "f5",
+        "type": "uint8"
+      },
+      {
+        "name": "f6",
+        "type": "uint16"
+      },
+      {
+        "name": "f7",
+        "type": "uint32"
+      },
+      {
+        "name": "f8",
+        "type": "uint64"
+      },
+      {
+        "name": "f9",
+        "type": "float32"
+      },
+      {
+        "name": "f10",
+        "type": "float64"
+      },
+      {
+        "name": "f11",
+        "type": "bytes"
+      },
+      {
+        "name": "f12",
+        "type": "string"
+      },
+      {
+        "name": "f13",
+        "type": "boolean"
+      },
+      {
+        "name": "f14",
+        "type": "int8"
+      },
+      {
+        "name": "f15",
+        "type": "int16"
+      },
+      {
+        "name": "f16",
+        "type": "int32"
+      },
+      {
+        "name": "f17",
+        "type": "int64"
+      },
+      {
+        "name": "f18",
+        "type": "uint8"
+      },
+      {
+        "name": "f19",
+        "type": "uint16"
+      },
+      {
+        "name": "f20",
+        "type": "uint32"
+      },
+      {
+        "name": "f21",
+        "type": "uint64"
+      },
+      {
+        "name": "f22",
+        "type": "float32"
+      },
+      {
+        "name": "f23",
+        "type": "float64"
+      },
+      {
+        "name": "f24",
+        "type": "bytes"
+      },
+      {
+        "name": "f25",
+        "type": "string"
+      },
+      {
+        "name": "f26",
+        "type": "boolean"
+      },
+      {
+        "name": "f27",
+        "type": "int8"
+      },
+      {
+        "name": "f28",
+        "type": "int16"
+      },
+      {
+        "name": "f29",
+        "type": "int32"
+      },
+      {
+        "name": "f30",
+        "type": "int64"
+      },
+      {
+        "name": "f31",
+        "type": "uint8"
+      },
+      {
+        "name": "f32",
+        "type": "uint16"
+      },
+      {
+        "name": "f33",
+        "type": "uint32"
+      },
+      {
+        "name": "f34",
+        "type": "uint64"
+      },
+      {
+        "name": "f35",
+        "type": "float32"
+      },
+      {
+        "name": "f36",
+        "type": "float64"
+      },
+      {
+        "name": "f37",
+        "type": "bytes"
+      },
+      {
+        "name": "f38",
+        "type": "string"
+      },
+      {
+        "name": "f39",
+        "type": "boolean"
+      },
+      {
+        "name": "f40",
+        "type": "int8"
+      }
+    ],
+    "recursive": false
+  },
+  "EdgeEmpty": {
+    "fields": [],
+    "recursive": false
+  },
+  "EdgeOneOpt": {
+    "fields": [
+      {
+        "name": "maybe",
+        "type": "string",
+        "optional": true
+      }
+    ],
+    "recursive": false
+  },
+  "EdgeBigNums": {
+    "fields": [
+      {
+        "name": "i8",
+        "type": "int8"
+      },
+      {
+        "name": "i16",
+        "type": "int16"
+      },
+      {
+        "name": "i32",
+        "type": "int32"
+      },
+      {
+        "name": "i64",
+        "type": "int64"
+      },
+      {
+        "name": "u8",
+        "type": "uint8"
+      },
+      {
+        "name": "u16",
+        "type": "uint16"
+      },
+      {
+        "name": "u32",
+        "type": "uint32"
+      },
+      {
+        "name": "u64",
+        "type": "uint64"
+      }
+    ],
+    "recursive": false
+  },
+  "EdgeZeroVals": {
+    "fields": [
+      {
+        "name": "s",
+        "type": "string"
+      },
+      {
+        "name": "i",
+        "type": "int32"
+      },
+      {
+        "name": "f",
+        "type": "float64"
+      },
+      {
+        "name": "b",
+        "type": "boolean"
+      },
+      {
+        "name": "by_field",
+        "type": "bytes"
+      }
+    ],
+    "recursive": false
+  },
+  "EdgeNullable": {
+    "fields": [
+      {
+        "name": "a",
+        "type": "string",
+        "optional": true
+      },
+      {
+        "name": "b",
+        "type": "int32",
+        "optional": true
+      },
+      {
+        "name": "c",
+        "type": "Inner",
+        "optional": true,
+        "isModel": true
+      },
+      {
+        "name": "d",
+        "type": "string",
+        "optional": true,
+        "isArray": true
+      }
+    ],
+    "recursive": false
+  },
+  "EdgeNegZero": {
+    "fields": [
+      {
+        "name": "v",
+        "type": "float64"
+      }
+    ],
+    "recursive": false
+  },
+  "EdgeNullByte": {
+    "fields": [
+      {
+        "name": "s",
+        "type": "string"
+      },
+      {
+        "name": "b",
+        "type": "bytes"
+      }
+    ],
+    "recursive": false
+  },
+  "EdgeBoundary": {
+    "fields": [
+      {
+        "name": "i32_neg129",
+        "type": "int32"
+      },
+      {
+        "name": "i32_128",
+        "type": "int32"
+      },
+      {
+        "name": "i32_256",
+        "type": "int32"
+      },
+      {
+        "name": "i32_65536",
+        "type": "int32"
+      },
+      {
+        "name": "i32_neg32769",
+        "type": "int32"
+      },
+      {
+        "name": "u32_65536",
+        "type": "uint32"
+      }
+    ],
+    "recursive": false
+  },
+  "EdgeStrLen": {
+    "fields": [
+      {
+        "name": "s31",
+        "type": "string"
+      },
+      {
+        "name": "s32",
+        "type": "string"
+      },
+      {
+        "name": "s255",
+        "type": "string"
+      },
+      {
+        "name": "s256",
+        "type": "string"
+      }
+    ],
+    "recursive": false
+  },
+  "EdgeBytesLen": {
+    "fields": [
+      {
+        "name": "b31",
+        "type": "bytes"
+      },
+      {
+        "name": "b32",
+        "type": "bytes"
+      },
+      {
+        "name": "b255",
+        "type": "bytes"
+      },
+      {
+        "name": "b256",
+        "type": "bytes"
+      }
+    ],
+    "recursive": false
+  },
+  "EdgeArrEmpty": {
+    "fields": [
+      {
+        "name": "items",
+        "type": "string",
+        "isArray": true
+      }
+    ],
+    "recursive": false
+  },
+  "EdgeArrBoundary": {
+    "fields": [
+      {
+        "name": "a15",
+        "type": "int32",
+        "isArray": true
+      },
+      {
+        "name": "a16",
+        "type": "int32",
+        "isArray": true
+      }
+    ],
+    "recursive": false
+  },
+  "OptArr1": {
+    "fields": [
+      {
+        "name": "req",
+        "type": "string"
+      },
+      {
+        "name": "items",
+        "type": "int32",
+        "optional": true,
+        "isArray": true
+      }
+    ],
+    "recursive": false
+  },
+  "OptArr2": {
+    "fields": [
+      {
+        "name": "id",
+        "type": "int32"
+      },
+      {
+        "name": "names",
+        "type": "string",
+        "optional": true,
+        "isArray": true
+      },
+      {
+        "name": "flags",
+        "type": "boolean",
+        "optional": true,
+        "isArray": true
+      }
+    ],
+    "recursive": false
+  },
+  "OptArr3": {
+    "fields": [
+      {
+        "name": "a",
+        "type": "string",
+        "optional": true,
+        "isArray": true
+      },
+      {
+        "name": "b",
+        "type": "float64",
+        "optional": true,
+        "isArray": true
+      }
+    ],
+    "recursive": false
+  },
+  "OptArr4": {
+    "fields": [
+      {
+        "name": "payload",
+        "type": "bytes"
+      },
+      {
+        "name": "chunks",
+        "type": "bytes",
+        "optional": true,
+        "isArray": true
+      }
+    ],
+    "recursive": false
+  },
+  "OptArr5": {
+    "fields": [
+      {
+        "name": "models",
+        "type": "Inner",
+        "optional": true,
+        "isArray": true,
+        "isModel": true
+      },
+      {
+        "name": "name",
+        "type": "string"
+      }
+    ],
+    "recursive": false
+  },
+  "NestOpt1": {
+    "fields": [
+      {
+        "name": "outer",
+        "type": "Label",
+        "isModel": true
+      },
+      {
+        "name": "name",
+        "type": "string"
+      }
+    ],
+    "recursive": false
+  },
+  "NestOpt2": {
+    "fields": [
+      {
+        "name": "a",
+        "type": "IdVal",
+        "optional": true,
+        "isModel": true
+      },
+      {
+        "name": "b",
+        "type": "IdVal",
+        "optional": true,
+        "isModel": true
+      },
+      {
+        "name": "c",
+        "type": "IdVal",
+        "optional": true,
+        "isModel": true
+      }
+    ],
+    "recursive": false
+  },
+  "NestOpt3": {
+    "fields": [
+      {
+        "name": "money",
+        "type": "Money",
+        "isModel": true
+      },
+      {
+        "name": "value_range",
+        "type": "Range32",
+        "optional": true,
+        "isModel": true
+      }
+    ],
+    "recursive": false
+  },
+  "NestOpt4": {
+    "fields": [
+      {
+        "name": "addr",
+        "type": "Addr",
+        "optional": true,
+        "isModel": true
+      },
+      {
+        "name": "coord",
+        "type": "Coord",
+        "optional": true,
+        "isModel": true
+      },
+      {
+        "name": "name",
+        "type": "string"
+      }
+    ],
+    "recursive": false
+  },
+  "NestOpt5": {
+    "fields": [
+      {
+        "name": "point",
+        "type": "Point3",
+        "isModel": true
+      },
+      {
+        "name": "addr",
+        "type": "Addr",
+        "isModel": true
+      },
+      {
+        "name": "label",
+        "type": "Label",
+        "optional": true,
+        "isModel": true
+      }
+    ],
+    "recursive": false
+  },
+  "NestOptInner1": {
+    "fields": [
+      {
+        "name": "tag",
+        "type": "string"
+      },
+      {
+        "name": "nested",
+        "type": "OptInner",
+        "optional": true,
+        "isModel": true
+      }
+    ],
+    "recursive": false
+  },
+  "NestOptInner2": {
+    "fields": [
+      {
+        "name": "tag",
+        "type": "string"
+      },
+      {
+        "name": "nested",
+        "type": "OptInner",
+        "isModel": true
+      }
+    ],
+    "recursive": false
+  },
+  "NestOptInner3": {
+    "fields": [
+      {
+        "name": "outer",
+        "type": "OptInner",
+        "optional": true,
+        "isModel": true
+      },
+      {
+        "name": "nested",
+        "type": "OptInner",
+        "optional": true,
+        "isModel": true
+      }
+    ],
+    "recursive": false
+  },
+  "DeepNest1": {
+    "fields": [
+      {
+        "name": "label",
+        "type": "string"
+      },
+      {
+        "name": "nested",
+        "type": "Addr",
+        "isModel": true
+      }
+    ],
+    "recursive": false
+  },
+  "DeepNest2": {
+    "fields": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "money",
+        "type": "Money",
+        "isModel": true
+      },
+      {
+        "name": "addr",
+        "type": "Addr",
+        "isModel": true
+      }
+    ],
+    "recursive": false
+  },
+  "DeepNest3": {
+    "fields": [
+      {
+        "name": "title",
+        "type": "string"
+      },
+      {
+        "name": "point",
+        "type": "Point3",
+        "isModel": true
+      },
+      {
+        "name": "value_range",
+        "type": "Range32",
+        "isModel": true
+      },
+      {
+        "name": "money",
+        "type": "Money",
+        "isModel": true
+      }
+    ],
+    "recursive": false
+  },
+  "DeepNest4": {
+    "fields": [
+      {
+        "name": "coords",
+        "type": "Coord",
+        "isArray": true,
+        "isModel": true
+      },
+      {
+        "name": "nested",
+        "type": "Inner",
+        "isModel": true
+      },
+      {
+        "name": "tag",
+        "type": "string"
+      }
+    ],
+    "recursive": false
+  },
+  "DeepNest5": {
+    "fields": [
+      {
+        "name": "labels",
+        "type": "Label",
+        "isArray": true,
+        "isModel": true
+      },
+      {
+        "name": "money",
+        "type": "Money",
+        "isModel": true
+      },
+      {
+        "name": "name",
+        "type": "string"
+      }
+    ],
+    "recursive": false
+  },
+  "DeepNest6": {
+    "fields": [
+      {
+        "name": "items",
+        "type": "IdVal",
+        "isArray": true,
+        "isModel": true
+      },
+      {
+        "name": "addr",
+        "type": "Addr",
+        "optional": true,
+        "isModel": true
+      },
+      {
+        "name": "coord",
+        "type": "Coord",
+        "isModel": true
+      }
+    ],
+    "recursive": false
+  },
+  "DeepNest7": {
+    "fields": [
+      {
+        "name": "a",
+        "type": "Addr",
+        "isModel": true
+      },
+      {
+        "name": "b",
+        "type": "Addr",
+        "isModel": true
+      },
+      {
+        "name": "c",
+        "type": "Addr",
+        "isModel": true
+      }
+    ],
+    "recursive": false
+  },
+  "TimestampEntry": {
+    "fields": [
+      {
+        "name": "ts",
+        "type": "int64"
+      },
+      {
+        "name": "event",
+        "type": "string"
+      },
+      {
+        "name": "payload",
+        "type": "bytes",
+        "optional": true
+      }
+    ],
+    "recursive": false
+  },
+  "ConfigEntry": {
+    "fields": [
+      {
+        "name": "key",
+        "type": "string"
+      },
+      {
+        "name": "intValue",
+        "type": "int32",
+        "optional": true
+      },
+      {
+        "name": "strValue",
+        "type": "string",
+        "optional": true
+      },
+      {
+        "name": "boolValue",
+        "type": "boolean",
+        "optional": true
+      },
+      {
+        "name": "floatValue",
+        "type": "float64",
+        "optional": true
+      }
+    ],
+    "recursive": false
+  },
+  "NestedSimple": {
+    "fields": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "value",
+        "type": "int32"
+      }
+    ],
+    "recursive": false
+  },
+  "DeepModel": {
+    "fields": [
+      {
+        "name": "payload",
+        "type": "bytes"
+      },
+      {
+        "name": "count",
+        "type": "int64"
+      }
+    ],
+    "recursive": false
+  },
+  "EnumHolder": {
+    "fields": [
+      {
+        "name": "color",
+        "type": "Color"
+      },
+      {
+        "name": "priority",
+        "type": "Priority"
+      },
+      {
+        "name": "status",
+        "type": "Status"
+      }
+    ],
+    "recursive": false
+  },
+  "OptEnumHolder": {
+    "fields": [
+      {
+        "name": "color",
+        "type": "Color",
+        "optional": true
+      },
+      {
+        "name": "priority",
+        "type": "Priority",
+        "optional": true
+      }
+    ],
+    "recursive": false
+  },
+  "EnumArrayHolder": {
+    "fields": [
+      {
+        "name": "colors",
+        "type": "Color",
+        "isArray": true
+      }
+    ],
+    "recursive": false
+  },
+  "EnumMixedHolder": {
+    "fields": [
+      {
+        "name": "status",
+        "type": "Status"
+      },
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "count",
+        "type": "int32"
+      },
+      {
+        "name": "active",
+        "type": "boolean"
+      }
+    ],
+    "recursive": false
+  },
+  "UnionFieldHolder": {
+    "fields": [
+      {
+        "name": "shape",
+        "type": "Shape"
+      },
+      {
+        "name": "id",
+        "type": "Ident"
+      }
+    ],
+    "recursive": false
+  },
+  "OptUnionFieldHolder": {
+    "fields": [
+      {
+        "name": "shape",
+        "type": "Shape",
+        "optional": true
+      },
+      {
+        "name": "name",
+        "type": "string"
+      }
+    ],
+    "recursive": false
+  },
+  "UnionArrayHolder": {
+    "fields": [
+      {
+        "name": "shapes",
+        "type": "Shape",
+        "isArray": true
+      }
+    ],
+    "recursive": false
+  },
+  "UnionMixedHolder": {
+    "fields": [
+      {
+        "name": "result",
+        "type": "ResultMsg"
+      },
+      {
+        "name": "tag",
+        "type": "Tagged"
+      },
+      {
+        "name": "count",
+        "type": "int32"
+      }
+    ],
+    "recursive": false
+  },
+  "UnionScalarHolder": {
+    "fields": [
+      {
+        "name": "id",
+        "type": "Ident"
+      },
+      {
+        "name": "sc",
+        "type": "ScalarUnion"
+      },
+      {
+        "name": "label",
+        "type": "string"
+      }
+    ],
+    "recursive": false
+  },
+  "Color": {
+    "kind": "enum",
+    "members": [
+      {
+        "name": "Red",
+        "value": 0
+      },
+      {
+        "name": "Green",
+        "value": 1
+      },
+      {
+        "name": "Blue",
+        "value": 2
+      }
+    ]
+  },
+  "Priority": {
+    "kind": "enum",
+    "members": [
+      {
+        "name": "Low",
+        "value": 0
+      },
+      {
+        "name": "Medium",
+        "value": 1
+      },
+      {
+        "name": "High",
+        "value": 2
+      },
+      {
+        "name": "Critical",
+        "value": 3
+      }
+    ]
+  },
+  "Status": {
+    "kind": "enum",
+    "members": [
+      {
+        "name": "Active",
+        "value": 0
+      },
+      {
+        "name": "Inactive",
+        "value": 1
+      },
+      {
+        "name": "Pending",
+        "value": 2
+      },
+      {
+        "name": "Archived",
+        "value": 3
+      }
+    ]
+  },
+  "Shape": {
+    "kind": "union",
+    "variants": [
+      {
+        "name": "circle",
+        "type": "Coord",
+        "isScalar": false
+      },
+      {
+        "name": "rect",
+        "type": "Range32",
+        "isScalar": false
+      }
+    ]
+  },
+  "Ident": {
+    "kind": "union",
+    "variants": [
+      {
+        "name": "name",
+        "type": "string",
+        "isScalar": true
+      },
+      {
+        "name": "number",
+        "type": "int32",
+        "isScalar": true
+      }
+    ]
+  },
+  "ResultMsg": {
+    "kind": "union",
+    "variants": [
+      {
+        "name": "ok",
+        "type": "string",
+        "isScalar": true
+      },
+      {
+        "name": "err",
+        "type": "Label",
+        "isScalar": false
+      }
+    ]
+  },
+  "Tagged": {
+    "kind": "union",
+    "variants": [
+      {
+        "name": "tag",
+        "type": "string",
+        "isScalar": true
+      },
+      {
+        "name": "score",
+        "type": "float64",
+        "isScalar": true
+      },
+      {
+        "name": "active",
+        "type": "boolean",
+        "isScalar": true
+      }
+    ]
+  },
+  "OptUnionHolder": {
+    "kind": "union",
+    "variants": [
+      {
+        "name": "shape",
+        "type": "Shape",
+        "isScalar": false
+      },
+      {
+        "name": "id",
+        "type": "Ident",
+        "isScalar": false
+      }
+    ]
+  },
+  "MixedUnion": {
+    "kind": "union",
+    "variants": [
+      {
+        "name": "point",
+        "type": "Coord",
+        "isScalar": false
+      },
+      {
+        "name": "label",
+        "type": "string",
+        "isScalar": true
+      },
+      {
+        "name": "count",
+        "type": "int32",
+        "isScalar": true
+      }
+    ]
+  },
+  "NestedUnion": {
+    "kind": "union",
+    "variants": [
+      {
+        "name": "result",
+        "type": "ResultMsg",
+        "isScalar": false
+      },
+      {
+        "name": "shape",
+        "type": "Shape",
+        "isScalar": false
+      }
+    ]
+  },
+  "ScalarUnion": {
+    "kind": "union",
+    "variants": [
+      {
+        "name": "s",
+        "type": "string",
+        "isScalar": true
+      },
+      {
+        "name": "i",
+        "type": "int32",
+        "isScalar": true
+      },
+      {
+        "name": "f",
+        "type": "float64",
+        "isScalar": true
+      },
+      {
+        "name": "b",
+        "type": "boolean",
+        "isScalar": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+json = {};
+json.shape = {};
+json.shape.rect = {};
+json.shape.rect.min = 0;
+json.shape.rect.max = 2147483647;
+json.name = "test";

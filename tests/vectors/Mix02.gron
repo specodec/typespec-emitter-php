@@ -1,0 +1,7 @@
+json = {};
+json.id = "world";
+json.loc = {};
+json.loc.lat = -3.14159265358979E0;
+json.loc.lng = 0E0;
+json.tags = [];
+json.tags[0] = "foo";

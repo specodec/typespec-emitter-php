@@ -1,0 +1,4 @@
+json = {};
+json.a = "world";
+json.b = "9223372036854775807";
+json.c = -0E0;

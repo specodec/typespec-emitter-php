@@ -1,0 +1,4 @@
+json = {};
+json.nested = {};
+json.nested.lat = -3.14159265358979E0;
+json.nested.lng = 0E0;

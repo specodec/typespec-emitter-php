@@ -1,0 +1,10 @@
+json = {};
+json.name = "world";
+json.values = [];
+json.values[0] = 0E0;
+json.values[1] = -0E0;
+json.values[2] = 2.718281828E0;
+json.nested = {};
+json.nested.x = 0;
+json.nested.y = 2147483647;
+json.flag = true;

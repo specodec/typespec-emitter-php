@@ -1,0 +1,10 @@
+json = {};
+json.shapes = [];
+json.shapes[0] = {};
+json.shapes[0].rect = {};
+json.shapes[0].rect.min = 0;
+json.shapes[0].rect.max = 2147483647;
+json.shapes[1] = {};
+json.shapes[1].circle = {};
+json.shapes[1].circle.lat = -3.14159265358979E0;
+json.shapes[1].circle.lng = 0E0;
